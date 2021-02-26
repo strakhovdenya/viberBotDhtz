@@ -83,9 +83,10 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
+    logger.debug('!!!!!!!!!!!!!!!.');
     response.send([
         new TextMessage(`${response.userProfile.name} привет!!!!`),
-        logger.debug('!!!!!!!!!!!!!!!.');
+
         // new PictureMessage('./../images/kv44.jpg'),
     ]);
 
