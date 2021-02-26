@@ -81,7 +81,8 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 });
 
 bot.onTextMessage(/./, (message, response) => {
-    checkUrlAvailability(response, message.text);
+    // checkUrlAvailability(response, message.text);
+    response.send(new TextMessage( "Леха привет!!!!"));
 });
 
 if (true) {
