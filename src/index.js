@@ -3,6 +3,7 @@
 const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
+const PictureMessage = require('viber-bot').Message.PictureMessage;
 require('dotenv').config();
 
 const winston = require('winston');
@@ -84,7 +85,7 @@ bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
     response.send([
         new TextMessage(`${response.userProfile.name} привет!!!!`),
-        new TextMessage(`${response.userProfile.name} привет!!!!`),
+        new PictureMessage('./images/kv44.jpg'),
     ]);
 
 });
