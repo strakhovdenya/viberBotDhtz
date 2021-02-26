@@ -82,10 +82,10 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-    response.send(new TextMessage([
-        `${response.userProfile.name} привет!!!!`),
-        `${response.userProfile.name} привет!!!!`),
-]);
+    response.send([
+        new TextMessage(`${response.userProfile.name} привет!!!!`),
+        new TextMessage(`${response.userProfile.name} привет!!!!`),
+    ]);
 
 });
 
