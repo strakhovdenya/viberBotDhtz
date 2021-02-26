@@ -24,35 +24,35 @@ function say(response, message) {
     response.send(new TextMessage(message));
 }
 
-function checkUrlAvailability(botResponse, urlToCheck) {
-
-    if (urlToCheck === '') {
-        say(botResponse, 'I need a URL to check');
-        return;
-    }
-
-    say(botResponse, 'One second...Let me check!');
-
-    var url = urlToCheck.replace(/^http:\/\//, '');
-    request('http://isup.me/' + url, function(error, requestResponse, body) {
-        if (error || requestResponse.statusCode !== 200) {
-            say(botResponse, 'Something is wrong with isup.me.');
-            return;
-        }
-
-        if (!error && requestResponse.statusCode === 200) {
-            if (body.search('is up') !== -1) {
-                say(botResponse, 'Hooray! ' + urlToCheck + '. looks good to me.');
-            } else if (body.search('Huh') !== -1) {
-                say(botResponse, 'Hmmmmm ' + urlToCheck + '. does not look like a website to me. Typo? please follow the format `test.com`');
-            } else if (body.search('down from here') !== -1) {
-                say(botResponse, 'Oh no! ' + urlToCheck + '. is broken.');
-            } else {
-                say(botResponse, 'Snap...Something is wrong with isup.me.');
-            }
-        }
-    })
-}
+// function checkUrlAvailability(botResponse, urlToCheck) {
+//
+//     if (urlToCheck === '') {
+//         say(botResponse, 'I need a URL to check');
+//         return;
+//     }
+//
+//     say(botResponse, 'One second...Let me check!');
+//
+//     var url = urlToCheck.replace(/^http:\/\//, '');
+//     request('http://isup.me/' + url, function(error, requestResponse, body) {
+//         if (error || requestResponse.statusCode !== 200) {
+//             say(botResponse, 'Something is wrong with isup.me.');
+//             return;
+//         }
+//
+//         if (!error && requestResponse.statusCode === 200) {
+//             if (body.search('is up') !== -1) {
+//                 say(botResponse, 'Hooray! ' + urlToCheck + '. looks good to me.');
+//             } else if (body.search('Huh') !== -1) {
+//                 say(botResponse, 'Hmmmmm ' + urlToCheck + '. does not look like a website to me. Typo? please follow the format `test.com`');
+//             } else if (body.search('down from here') !== -1) {
+//                 say(botResponse, 'Oh no! ' + urlToCheck + '. is broken.');
+//             } else {
+//                 say(botResponse, 'Snap...Something is wrong with isup.me.');
+//             }
+//         }
+//     })
+// }
 
 const logger = createLogger();
 
@@ -82,7 +82,11 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-    response.send(new TextMessage( "Леха привет!!!!"));
+    response.send(new TextMessage([
+        `${response.userProfile.name} привет!!!!`),
+        `${response.userProfile.name} привет!!!!`),
+]);
+
 });
 
 if (true) {
