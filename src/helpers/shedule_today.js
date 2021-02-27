@@ -22,9 +22,9 @@ exports.send = function (response) {
     Лед на: ${objDay.time_ice}  \r\n
     Место: ${objDay.ice_place}  \r\n
     Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n
-    ==========================
+    ==========================\r\n
     Время сбора: ${objDay.gathering_time}`;
-    
+
     response.send([
             new TextMessage(text, constants.OPTION_KEYBOARD),
         ]
