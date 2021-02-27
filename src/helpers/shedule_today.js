@@ -25,8 +25,12 @@ exports.send = function (response) {
     ==========================\r\n
     Время сбора: ${objDay.gathering_time}`;
 
-    response.send([
-            new TextMessage(text, constants.OPTION_KEYBOARD),
-        ]
-    );
+    const ansver =new TextMessage(text, constants.OPTION_KEYBOARD);
+    console.log('===============================');
+    console.log(ansver);
+    console.log('===============================');
+    console.log(response);
+    console.log('===============================');
+
+    response.send(ansver);
 }
