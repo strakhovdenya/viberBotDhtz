@@ -119,6 +119,7 @@ bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
     logger.debug('!!!!!!!!!!!!!!!!!!!');
     logger.debug(message);
+    consol.log(message);
     logger.debug('!!!!!!!!!!!!!!!!!!!');
     response.send(
         new TextMessage(`${response.userProfile.name} привет!!!!`,OPTION_KEYBOARD),
@@ -130,8 +131,7 @@ bot.onTextMessage(/./, (message, response) => {
 
 });
 
-bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) =>
-    onFinish(new TextMessage(`Hi, ${userProfile.name}! Nice to meet you.`)));
+
 
 if (true) {
     const http = require('http');
