@@ -86,11 +86,11 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
-    response.send([
+    response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/kv44.jpg'),
-    ]);
+        new PictureMessage("https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg","covid",null),
+    );
 
 });
 
