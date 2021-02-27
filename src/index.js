@@ -119,7 +119,7 @@ bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
     logger.debug('!!!!!!!!!!!!!!!!!!!');
     logger.debug(message);
-    consol.log(message);
+    console.log(message);
     logger.debug('!!!!!!!!!!!!!!!!!!!');
     response.send(
         new TextMessage(`${response.userProfile.name} привет!!!!`,OPTION_KEYBOARD),
