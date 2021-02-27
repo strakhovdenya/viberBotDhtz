@@ -7,6 +7,7 @@ const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
 const sheduleMonth = require('./helpers/shedule_month')
 const loggerCreator = require('./helpers/logger')
+const constants = require("./helpers/constants.js");
 
 require('dotenv').config();
 
@@ -65,7 +66,7 @@ bot.onTextMessage(/./, (message, response) => {
         sheduleMonth.send(response);
     } else {
         response.send(
-            new TextMessage(`${response.userProfile.name} привет!!!!`, OPTION_KEYBOARD),
+            new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD),
         );
     }
 });
