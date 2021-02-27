@@ -8,7 +8,9 @@ const SCHEDULE_URL = 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417
 
 exports.send = function(response){
     const date = new Date();
-    const formattedDate = date.getDate() + '.' + date.getMonth() + '.' + date.getFullYear();
+    const month = date.getMonth()+1;
+    const monthForatted = (month < 10 ? '0' : '') + month;
+    const formattedDate = date.getDate() + '.' + monthForatted + '.' + date.getFullYear();
     response.send([
             new TextMessage(`${response.userProfile.name} лови рассписание на ${formattedDate}`, constants.OPTION_KEYBOARD),
         ]
