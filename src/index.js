@@ -83,7 +83,8 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-    logger.debug('!!!!!!!!!!!!!!!.');
+    console.log('console');
+    logger.debug('!!!!!!!!!!!!!!!!!');
     response.send([
         new TextMessage(`${response.userProfile.name} привет!!!!`),
 
