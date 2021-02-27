@@ -4,6 +4,7 @@ const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
+const KeyboardMessage = require('viber-bot').Message.Keyboard;
 require('dotenv').config();
 
 const winston = require('winston');
@@ -83,13 +84,31 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     }
 });
 
+    const SAMPLE_KEYBOARD = {
+        "Type": "keyboard",
+        "Revision": 1,
+        "Buttons": [
+            {
+                "Columns": 3,
+                "Rows": 2,
+                "BgColor": "#e6f5ff",
+                "BgMedia": "http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg",
+                "BgMediaType": "picture",
+                "BgLoop": true,
+                "ActionType": "reply",
+                "ActionBody": "Yes"
+            }
+        ]
+    };
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
     response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+        // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+
+    const message = new KeyboardMessage(SAMPLE_KEYBOARD);
     );
 
 });
