@@ -10,9 +10,9 @@ const loggerCreator = require('./helpers/logger')
 
 require('dotenv').config();
 
-const winston = require('winston');
-const toYAML = require('winston-console-formatter');
-const ngrok = require('./get_public_url');
+// const winston = require('winston');
+// const toYAML = require('winston-console-formatter');
+
 
 var request = require('request');
 
