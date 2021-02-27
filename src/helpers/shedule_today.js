@@ -17,8 +17,16 @@ exports.send = function (response) {
 
     const formattedDate = day + '.' + monthForatted + '.' + date.getFullYear();
     const objDay = constants.SHEDULE[formattedDate];
+
+    const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
+    Лед на: ${objDay.time_ice}  \r\n
+    Место: ${objDay.ice_place}  \r\n
+    Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n
+    ==========================
+    Время сбора: ${objDay.gathering_time}`;
+    
     response.send([
-            new TextMessage(`${response.userProfile.name} лови рассписание на ${formattedDate}. Лед на ${objDay.time_ice} место: ${objDay.ice_place}`, constants.OPTION_KEYBOARD),
+            new TextMessage(text, constants.OPTION_KEYBOARD),
         ]
     );
 }
