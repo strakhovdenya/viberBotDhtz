@@ -117,7 +117,7 @@ const OPTION_KEYBOARD = {
 };
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-
+    logger.debug(message);
     response.send(
         new TextMessage(`${response.userProfile.name} привет!!!!`,OPTION_KEYBOARD),
 
