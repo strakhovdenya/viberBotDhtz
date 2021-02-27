@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/shedule_month.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/logger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +38,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/helpers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,7 +66,7 @@
       <workItem from="1614359695031" duration="1861000" />
       <workItem from="1614365940117" duration="2446000" />
       <workItem from="1614405752054" duration="12313000" />
-      <workItem from="1614427061328" duration="3391000" />
+      <workItem from="1614427061328" duration="3760000" />
     </task>
     <servers />
   </component>

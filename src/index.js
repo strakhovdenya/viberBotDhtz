@@ -6,6 +6,7 @@ const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
 const sheduleMonth = require('./helpers/shedule_month')
+const loggerCreator = require('./helpers/logger')
 
 require('dotenv').config();
 
@@ -15,50 +16,21 @@ const ngrok = require('./get_public_url');
 
 var request = require('request');
 
-function createLogger() {
-    const logger = new winston.Logger({
-        level: "debug" // We recommend using the debug level for development
-    });
-
-    logger.add(winston.transports.Console, toYAML.config());
-    return logger;
-}
+// function createLogger() {
+//     const logger = new winston.Logger({
+//         level: "debug" // We recommend using the debug level for development
+//     });
+//
+//     logger.add(winston.transports.Console, toYAML.config());
+//     return logger;
+// }
 
 function say(response, message) {
     response.send(new TextMessage(message));
 }
 
-// function checkUrlAvailability(botResponse, urlToCheck) {
-//
-//     if (urlToCheck === '') {
-//         say(botResponse, 'I need a URL to check');
-//         return;
-//     }
-//
-//     say(botResponse, 'One second...Let me check!');
-//
-//     var url = urlToCheck.replace(/^http:\/\//, '');
-//     request('http://isup.me/' + url, function(error, requestResponse, body) {
-//         if (error || requestResponse.statusCode !== 200) {
-//             say(botResponse, 'Something is wrong with isup.me.');
-//             return;
-//         }
-//
-//         if (!error && requestResponse.statusCode === 200) {
-//             if (body.search('is up') !== -1) {
-//                 say(botResponse, 'Hooray! ' + urlToCheck + '. looks good to me.');
-//             } else if (body.search('Huh') !== -1) {
-//                 say(botResponse, 'Hmmmmm ' + urlToCheck + '. does not look like a website to me. Typo? please follow the format `test.com`');
-//             } else if (body.search('down from here') !== -1) {
-//                 say(botResponse, 'Oh no! ' + urlToCheck + '. is broken.');
-//             } else {
-//                 say(botResponse, 'Snap...Something is wrong with isup.me.');
-//             }
-//         }
-//     })
-// }
 
-const logger = createLogger();
+const logger = loggerCreator.createLogger();
 
 
 // Creating the bot with access token, name and avatar
@@ -71,7 +43,6 @@ const bot = new ViberBot(logger, {
 bot.onError(err => logger.error(err));
 
 bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) => {
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         onFinish(new TextMessage(`Hi, ${userProfile.name}! Nice to meet you.`))
     }
 );
@@ -88,59 +59,15 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     }
 });
 
-const OPTION_KEYBOARD = {
-    "Type": "keyboard",
-    "Revision": 1,
-    "Buttons": [
-        {
-            "Columns": 6,
-            "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Рассписание на февраль",
-            //TextVAlign, TextHAlign : using default (middle, center)
-            "ActionType": "reply",
-            "ActionBody": "shedule_month"
-        },
-        {
-            "Columns": 6,
-            "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Рассписание на сегодня",
-            "ActionType": "reply",
-            "ActionBody": "DayOff"
-        },
-        {
-            "Columns": 6,
-            "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Рассписание на завтра",
-            "ActionType": "reply",
-            "ActionBody": "HalfDayOff"
-        }
-    ]
-};
+
 bot.onTextMessage(/./, (message, response) => {
-    // checkUrlAvailability(response, message.text);
-
     if (message.text === 'shedule_month') {
-
         sheduleMonth.send(response);
-        // response.send([
-        //         new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
-        //         new TextMessage(`${response.userProfile.name} \r\n лови рассписание на месяц`, OPTION_KEYBOARD),
-        //     ]
-        // );
     } else {
         response.send(
             new TextMessage(`${response.userProfile.name} привет!!!!`, OPTION_KEYBOARD),
-
-            // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
-
-            // new RichMediaMessage(DAY_BUTTONS);
         );
     }
-
-
 });
 
 
