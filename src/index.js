@@ -5,34 +5,21 @@ const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
-const sheduleMonth = require('./helpers/shedule_month')
-const loggerCreator = require('./helpers/logger')
+
+const sheduleMonth = require('./helpers/shedule_month');
+const sheduleToday = require('./helpers/shedule_today');
+const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
+const request = require('request');
+
 require('dotenv').config();
-
-// const winston = require('winston');
-// const toYAML = require('winston-console-formatter');
-
-
-var request = require('request');
-
-// function createLogger() {
-//     const logger = new winston.Logger({
-//         level: "debug" // We recommend using the debug level for development
-//     });
-//
-//     logger.add(winston.transports.Console, toYAML.config());
-//     return logger;
-// }
 
 function say(response, message) {
     response.send(new TextMessage(message));
 }
 
-
 const logger = loggerCreator.createLogger();
-
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
@@ -64,10 +51,10 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 bot.onTextMessage(/./, (message, response) => {
     if (message.text === 'shedule_month') {
         sheduleMonth.send(response);
+    } else if (message.text === 'shedule_today') {
+        sheduleToday.send(response);
     } else {
-        response.send(
-            new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD),
-        );
+        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD));
     }
 });
 
@@ -76,4 +63,5 @@ const http = require('http');
 const port = process.env.PORT || 8080;
 
 http.createServer(bot.middleware()).listen(port, () => bot.setWebhook('https://viberhelperdhtz.herokuapp.com/'));
+
 
