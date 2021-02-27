@@ -56,7 +56,7 @@ function say(response, message) {
 //     })
 // }
 
-// const logger = createLogger();
+const logger = createLogger();
 
 
 // Creating the bot with access token, name and avatar
