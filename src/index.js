@@ -92,10 +92,10 @@ const OPTION_KEYBOARD = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Late",
+            "Text": "Рассписание на месяц",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "Late"
+            "ActionBody": "Late1"
         },
         {
             "Columns": 6,
