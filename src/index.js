@@ -69,6 +69,8 @@ const bot = new ViberBot(logger, {
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
 });
 
+bot.onError(err => logger.error(err));
+
 // The user will get those messages on first registration
 bot.onSubscribe(response => {
     say(response, `Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I'll do the rest!`);
@@ -83,12 +85,11 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-    console.log('console');
-    logger.debug('!!!!!!!!!!!!!!!!!');
-    response.send([
-        new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        // new PictureMessage('./../images/kv44.jpg'),
+    response.send([
+        // new TextMessage(`${response.userProfile.name} привет!!!!`),
+
+        new PictureMessage('./../images/kv44.jpg'),
     ]);
 
 });
