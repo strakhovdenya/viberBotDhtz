@@ -95,7 +95,7 @@ const OPTION_KEYBOARD = {
             "Text": "Рассписание на месяц",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "Late"
+            "ActionBody": "shedule_month"
         },
         {
             "Columns": 6,
@@ -118,10 +118,9 @@ const OPTION_KEYBOARD = {
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
-    if (message.text === 'Late') {
+    if (message.text === 'shedule_month') {
         response.send([
-                new TextMessage(`${response.userProfile.name} лови рассписание на месяц`, OPTION_KEYBOARD),
-                new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614416905/dhtz/hockey-logo-vector_20448-291_cbutce.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614416905/dhtz/hockey-logo-vector_20448-291_cbutce.jpg'),
+                new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
                 new TextMessage(`${response.userProfile.name} лови рассписание на месяц`, OPTION_KEYBOARD),
             ]
         );
