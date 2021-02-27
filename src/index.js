@@ -122,6 +122,7 @@ bot.onTextMessage(/./, (message, response) => {
         response.send([
                 new TextMessage(`${response.userProfile.name} лови рассписание на месяц`, OPTION_KEYBOARD),
                 new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614416905/dhtz/hockey-logo-vector_20448-291_cbutce.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614416905/dhtz/hockey-logo-vector_20448-291_cbutce.jpg'),
+                new TextMessage(`${response.userProfile.name} лови рассписание на месяц`, OPTION_KEYBOARD),
             ]
         );
     } else {
