@@ -117,20 +117,23 @@ const OPTION_KEYBOARD = {
 };
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
-    logger.debug('!!!!!!!!!!!!!!!!!!!');
-    logger.debug(message);
-    console.log(message);
-    logger.debug('!!!!!!!!!!!!!!!!!!!');
-    response.send(
-        new TextMessage(`${response.userProfile.name} привет!!!!`,OPTION_KEYBOARD),
 
-        // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+    if (message.text === 'Late') {
+        response.send(
+            new TextMessage(`${response.userProfile.name} лови рассписание на месяц`, OPTION_KEYBOARD),
+        );
+    } else {
+        response.send(
+            new TextMessage(`${response.userProfile.name} привет!!!!`, OPTION_KEYBOARD),
 
-        // new RichMediaMessage(DAY_BUTTONS);
-    );
+            // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+
+            // new RichMediaMessage(DAY_BUTTONS);
+        );
+    }
+
 
 });
-
 
 
 if (true) {
