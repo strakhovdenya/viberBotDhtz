@@ -89,7 +89,7 @@ bot.onTextMessage(/./, (message, response) => {
     response.send([
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new PictureMessage('./../images/kv44.jpg'),
+        new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/kv44.jpg'),
     ]);
 
 });
