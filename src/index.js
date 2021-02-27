@@ -4,7 +4,7 @@ const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
-const KeyboardMessage = require('viber-bot').Message.Keyboard;
+const RichMediaMessage = require('viber-bot').Message.RichMedia;
 require('dotenv').config();
 
 const winston = require('winston');
@@ -84,32 +84,47 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     }
 });
 
-    const SAMPLE_KEYBOARD = {
-        "Type": "keyboard",
-        "Buttons": [{
-            "Columns": 3,
-            "Rows": 2,
-            "Text": "<font color=\"#494E67\">Smoking</font><br><br>",
-            "TextSize": "medium",
-            "TextHAlign": "center",
-            "TextVAlign": "bottom",
+const DAY_BUTTONS = {
+    "ButtonsGroupColumns": 6,
+    "ButtonsGroupRows": 4,
+    "BgColor": "#FFFFFF",
+    "Buttons": [{
+        "ActionType": "reply",
+        "ActionBody": "Day",
+        "BgColor": "#85bb65",
+        "Text": "Day",
+        "TextOpacity": 60,
+        "Rows": 1,
+        "Columns": 6
+    },
+        {
             "ActionType": "reply",
-            "ActionBody": "Smoking",
-            "BgColor": "#f7bb3f",
-            "Image": "https: //s12.postimg.org/ti4alty19/smoke.png"
-        }, {
-            "Columns": 3,
-            "Rows": 2,
-            "Text": "<font color=\"#494E67\">Non Smoking</font><br><br>",
-            "TextSize": "medium",
-            "TextHAlign": "center",
-            "TextVAlign": "bottom",
+            "ActionBody": "Month",
+            "BgColor": "#85bb65",
+            "Text": "Month",
+            "TextOpacity": 60,
+            "Rows": 1,
+            "Columns": 6
+        },
+        {
             "ActionType": "reply",
-            "ActionBody": "Non smoking",
-            "BgColor": "# f6f7f9",
-            "Image": "https: //s14.postimg.org/us7t38az5/Nonsmoke.png"
+            "ActionBody": "Year",
+            "BgColor": "#85bb65",
+            "Text": "Year",
+            "TextOpacity": 60,
+            "Rows": 1,
+            "Columns": 6
+        },
+        {
+            "ActionType": "reply",
+            "ActionBody": "Submit",
+            "BgColor": "#85bb65",
+            "Text": "Submit",
+            "TextOpacity": 60,
+            "Rows": 1,
+            "Columns": 6
         }]
-    }
+};
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
@@ -118,7 +133,7 @@ bot.onTextMessage(/./, (message, response) => {
 
         // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
 
-        new KeyboardMessage(SAMPLE_KEYBOARD);
+        new RichMediaMessage(DAY_BUTTONS);
     );
 
 });
