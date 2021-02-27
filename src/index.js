@@ -5,7 +5,6 @@ const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
-const logger = require("./logger.js");
 require('dotenv').config();
 
 const winston = require('winston');
@@ -67,7 +66,7 @@ const bot = new ViberBot(logger, {
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
 });
 
-bot.onError(err => logger.log(err));
+bot.onError(err => logger.error(err));
 
 bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) => {
         console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
@@ -122,7 +121,7 @@ bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
     if (message.text === 'shedule_month') {
-        logger.log('######################################');
+        logger.debug('######################################');
         response.send([
                 new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
                 new TextMessage(`${response.userProfile.name} \r\n лови рассписание на месяц`, OPTION_KEYBOARD),
