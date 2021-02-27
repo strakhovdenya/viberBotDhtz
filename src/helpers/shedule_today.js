@@ -26,11 +26,6 @@ exports.send = function (response) {
     Время сбора: ${objDay.gathering_time}`;
 
     const ansver =new TextMessage(text, constants.OPTION_KEYBOARD);
-    console.log('===============================');
-    console.log(ansver);
-    console.log('===============================');
-    console.log(response);
-    console.log('===============================');
 
     response.send(ansver);
 }
