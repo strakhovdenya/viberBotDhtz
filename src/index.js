@@ -4,6 +4,7 @@ const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
+const FileMessage = require('viber-bot').Message.File,
 require('dotenv').config();
 
 const winston = require('winston');
@@ -86,13 +87,16 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
-    response.send([
+    response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
-    ]);
+        new FileMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+    );
 
 });
+
+bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) =>
+    onFinish(new TextMessage(`Hi, ${userProfile.name}! Nice to meet you.`)));
 
 if (true) {
     const http = require('http');
