@@ -89,7 +89,7 @@ bot.onTextMessage(/./, (message, response) => {
     response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new PictureMessage("https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg","covid",null),
+        new PictureMessage("https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg","covid","https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg"),
     );
 
 });
