@@ -118,7 +118,7 @@ bot.onTextMessage(/./, (message, response) => {
     if (message.text === 'shedule_month') {
         response.send([
                 new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
-                new TextMessage(`${response.userProfile.name} \r\n лови рассписание на месяц`, OPTION_KEYBOARD),
+                new TextMessage(`${response.userProfile.name}  лови рассписание на месяц`, OPTION_KEYBOARD),
             ]
         );
     } else {
