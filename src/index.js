@@ -58,10 +58,6 @@ function say(response, message) {
 
 const logger = createLogger();
 
-// if (!process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY) {
-//     logger.debug('Could not find the Viber account access token key in your environment variable. Please make sure you followed readme guide.');
-//     return;
-// }
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
@@ -71,6 +67,12 @@ const bot = new ViberBot(logger, {
 });
 
 bot.onError(err => logger.error(err));
+
+bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) => {
+        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+        onFinish(new TextMessage(`Hi, ${userProfile.name}! Nice to meet you.`))
+    }
+);
 
 // The user will get those messages on first registration
 bot.onSubscribe(response => {
@@ -138,22 +140,8 @@ bot.onTextMessage(/./, (message, response) => {
 });
 
 
-if (true) {
-    const http = require('http');
-    const port = process.env.PORT || 8080;
+const http = require('http');
+const port = process.env.PORT || 8080;
 
-    http.createServer(bot.middleware()).listen(port, () => bot.setWebhook('https://viberhelperdhtz.herokuapp.com/'));
-} else {
-    logger.debug('Could not find the now.sh/Heroku environment variables. Trying to use the local ngrok server.');
-    return ngrok.getPublicUrl().then(publicUrl => {
-        const http = require('http');
-        const port = process.env.PORT || 8080;
+http.createServer(bot.middleware()).listen(port, () => bot.setWebhook('https://viberhelperdhtz.herokuapp.com/'));
 
-        http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(publicUrl));
-
-    }).catch(error => {
-        console.log('Can not connect to ngrok server. Is it running?');
-        console.error(error);
-        process.exit(1);
-    });
-}
