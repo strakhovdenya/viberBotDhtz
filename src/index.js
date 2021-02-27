@@ -4,7 +4,7 @@ const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
-const FileMessage = require('viber-bot').Message.File;
+const FileMessage = require('viber-bot').Message.File,
 require('dotenv').config();
 
 const winston = require('winston');
@@ -90,7 +90,7 @@ bot.onTextMessage(/./, (message, response) => {
     response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new FileMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg',69,'hockey-logo-vector_20448-291.jpg'),
+        new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
     );
 
 });
