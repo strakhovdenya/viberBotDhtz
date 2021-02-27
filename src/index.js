@@ -90,7 +90,7 @@ bot.onTextMessage(/./, (message, response) => {
     response.send(
         // new TextMessage(`${response.userProfile.name} привет!!!!`),
 
-        new FileMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
+        new FileMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg',69,'hockey-logo-vector_20448-291.jpg'),
     );
 
 });
