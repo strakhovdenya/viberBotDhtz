@@ -95,13 +95,13 @@ const OPTION_KEYBOARD = {
             "Text": "Рассписание на месяц",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "Late1"
+            "ActionBody": "Late"
         },
         {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Day Off",
+            "Text": "Рассписание на сегодня",
             "ActionType": "reply",
             "ActionBody": "DayOff"
         },
@@ -109,7 +109,7 @@ const OPTION_KEYBOARD = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Half Day Off",
+            "Text": "Рассписание на завтра",
             "ActionType": "reply",
             "ActionBody": "HalfDayOff"
         }
