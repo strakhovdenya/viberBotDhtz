@@ -108,7 +108,7 @@ bot.onTextMessage(/./, (message, response) => {
 
         // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
 
-    const message = new KeyboardMessage(SAMPLE_KEYBOARD);
+        new KeyboardMessage(SAMPLE_KEYBOARD);
     );
 
 });
