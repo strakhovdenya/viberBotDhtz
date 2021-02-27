@@ -5,6 +5,8 @@ const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
+const sheduleMonth = require('./helpers/shedule_month')
+
 require('dotenv').config();
 
 const winston = require('winston');
@@ -121,12 +123,13 @@ bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
     if (message.text === 'shedule_month') {
-        logger.debug('######################################');
-        response.send([
-                new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
-                new TextMessage(`${response.userProfile.name} \r\n лови рассписание на месяц`, OPTION_KEYBOARD),
-            ]
-        );
+
+        sheduleMonth.send(response);
+        // response.send([
+        //         new PictureMessage('https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg', null, 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1614417847/dhtz/shedule_feb_kfncaw.jpg'),
+        //         new TextMessage(`${response.userProfile.name} \r\n лови рассписание на месяц`, OPTION_KEYBOARD),
+        //     ]
+        // );
     } else {
         response.send(
             new TextMessage(`${response.userProfile.name} привет!!!!`, OPTION_KEYBOARD),
