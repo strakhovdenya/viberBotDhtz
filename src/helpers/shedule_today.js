@@ -16,8 +16,9 @@ exports.send = function (response) {
     const monthForatted = (month < 10 ? '0' : '') + month;
 
     const formattedDate = day + '.' + monthForatted + '.' + date.getFullYear();
+    const objDay = constants.SHEDULE[formattedDate];
     response.send([
-            new TextMessage(`${response.userProfile.name} лови рассписание на ${formattedDate}`, constants.OPTION_KEYBOARD),
+            new TextMessage(`${response.userProfile.name} лови рассписание на ${formattedDate}. Лед на ${objDay.time_ice} место: ${objDay.ice_place}`, constants.OPTION_KEYBOARD),
         ]
     );
 }
