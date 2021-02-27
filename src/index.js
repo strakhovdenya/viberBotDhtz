@@ -92,7 +92,7 @@ const OPTION_KEYBOARD = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на месяц",
+            "Text": "Рассписание на февраль",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
             "ActionBody": "shedule_month"
