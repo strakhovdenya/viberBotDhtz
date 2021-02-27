@@ -84,52 +84,42 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     }
 });
 
-const DAY_BUTTONS = {
-    "ButtonsGroupColumns": 6,
-    "ButtonsGroupRows": 4,
-    "BgColor": "#FFFFFF",
-    "Buttons": [{
-        "ActionType": "reply",
-        "ActionBody": "Day",
-        "BgColor": "#85bb65",
-        "Text": "Day",
-        "TextOpacity": 60,
-        "Rows": 1,
-        "Columns": 6
-    },
+const OPTION_KEYBOARD = {
+    "Type": "keyboard",
+    "Revision": 1,
+    "Buttons": [
         {
-            "ActionType": "reply",
-            "ActionBody": "Month",
-            "BgColor": "#85bb65",
-            "Text": "Month",
-            "TextOpacity": 60,
+            "Columns": 6,
             "Rows": 1,
-            "Columns": 6
+            "BgColor": "#2db9b9",
+            "Text": "Late",
+            //TextVAlign, TextHAlign : using default (middle, center)
+            "ActionType": "reply",
+            "ActionBody": "Late"
         },
         {
-            "ActionType": "reply",
-            "ActionBody": "Year",
-            "BgColor": "#85bb65",
-            "Text": "Year",
-            "TextOpacity": 60,
+            "Columns": 6,
             "Rows": 1,
-            "Columns": 6
+            "BgColor": "#2db9b9",
+            "Text": "Day Off",
+            "ActionType": "reply",
+            "ActionBody": "DayOff"
         },
         {
-            "ActionType": "reply",
-            "ActionBody": "Submit",
-            "BgColor": "#85bb65",
-            "Text": "Submit",
-            "TextOpacity": 60,
+            "Columns": 6,
             "Rows": 1,
-            "Columns": 6
-        }]
+            "BgColor": "#2db9b9",
+            "Text": "Half Day Off",
+            "ActionType": "reply",
+            "ActionBody": "HalfDayOff"
+        }
+    ]
 };
 bot.onTextMessage(/./, (message, response) => {
     // checkUrlAvailability(response, message.text);
 
     response.send(
-        // new TextMessage(`${response.userProfile.name} привет!!!!`),
+        new TextMessage(`${response.userProfile.name} привет!!!!`,OPTION_KEYBOARD),
 
         // new PictureMessage('https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg', null, 'https://git.heroku.com/viberhelperdhtz.git/src/images/hockey-logo-vector_20448-291.jpg'),
 
