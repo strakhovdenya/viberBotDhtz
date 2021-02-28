@@ -8,7 +8,7 @@ con.OPTION_KEYBOARD = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на февраль",
+            "Text": "Рассписание на МАРТ",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
             "ActionBody": "shedule_month"
