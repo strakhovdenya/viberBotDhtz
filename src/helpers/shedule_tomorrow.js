@@ -24,9 +24,9 @@ exports.send = function (response) {
     let ansver;
 
     if (typeof objDay === 'undefined') {
-        ansver = sheduleDayAnswers.good(response, formattedDate, objDay);
-    } else {
         ansver = sheduleDayAnswers.bad(response, formattedDate, objDay);
+    } else {
+        ansver = sheduleDayAnswers.good(response, formattedDate, objDay);
     }
 
 
