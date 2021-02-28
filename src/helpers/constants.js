@@ -33,200 +33,226 @@ con.OPTION_KEYBOARD = {
 };
 
 con.SHEDULE = {
-    "01.02.2021": {
-        "data": "01.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "01.03.2021": {
+        "data": "01.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "02.02.2021": {
-        "data": "02.02.2021",
+    "02.03.2021": {
+        "data": "02.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "03.02.2021": {
-        "data": "03.02.2021",
+    "03.03.2021": {
+        "data": "03.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "04.02.2021": {
-        "data": "04.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "04.03.2021": {
+        "data": "04.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "05.02.2021": {
-        "data": "05.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "05.03.2021": {
+        "data": "05.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "06.02.2021": {
-        "data": "06.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "06.03.2021": {
+        "data": "06.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "07.02.2021": {
-        "data": "07.02.2021",
-        "time_ice": "06.15 - 07.45",
+    "07.03.2021": {
+        "data": "07.03.2021",
+        "time_ice": "06:15 - 07:45",
         "ice_place": "Салтівський лід",
         "time_ground": "",
-        "gathering_time": "06.00"
+        "gathering_time": "6:00"
     },
-    "08.02.2021": {
-        "data": "08.02.2021",
-        "time_ice": "21.00 - 22.00",
-        "ice_place": "Палац Спорту",
-        "time_ground": "",
-        "gathering_time": "20.15"
+    "08.03.2021": {
+        "data": "08.03.2021",
+        "time_ice": "ВИХІДНИЙ",
+        "ice_place": "",
+        "time_ground": "ВИХІДНИЙ",
+        "gathering_time": ""
     },
-    "09.02.2021": {
-        "data": "09.02.2021",
+    "09.03.2021": {
+        "data": "09.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "10.02.2021": {
-        "data": "10.02.2021",
+    "10.03.2021": {
+        "data": "10.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "11.02.2021": {
-        "data": "11.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "11.03.2021": {
+        "data": "11.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "12.02.2021": {
-        "data": "12.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "12.03.2021": {
+        "data": "12.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "13.02.2021": {
-        "data": "13.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "13.03.2021": {
+        "data": "13.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "14.02.2021": {
-        "data": "14.02.2021",
-        "time_ice": "06.15 - 07.45",
+    "14.03.2021": {
+        "data": "14.03.2021",
+        "time_ice": "06:15 - 07:45",
         "ice_place": "Салтівський лід",
         "time_ground": "",
-        "gathering_time": "06.00"
+        "gathering_time": "6:00"
     },
-    "15.02.2021": {
-        "data": "15.02.2021",
-        "time_ice": "21.00 - 22.00",
-        "ice_place": "П,алац Спорту",
+    "15.03.2021": {
+        "data": "15.03.2021",
+        "time_ice": "21:00 - 22:00",
+        "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "16.02.2021": {
-        "data": "16.02.2021",
+    "16.03.2021": {
+        "data": "16.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "17.02.2021": {
-        "data": "17.02.2021",
+    "17.03.2021": {
+        "data": "17.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "18.02.2021": {
-        "data": "18.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "18.03.2021": {
+        "data": "18.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "19.02.2021": {
-        "data": "19.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "19.03.2021": {
+        "data": "19.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "20.02.2021": {
-        "data": "20.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "20.03.2021": {
+        "data": "20.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "21.02.2021": {
-        "data": "21.02.2021",
-        "time_ice": "06.15 - 07.45",
+    "21.03.2021": {
+        "data": "21.03.2021",
+        "time_ice": "06:15 - 07:45",
         "ice_place": "Салтівський лід",
         "time_ground": "",
-        "gathering_time": "06.00"
+        "gathering_time": "6:00"
     },
-    "22.02.2021": {
-        "data": "22.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "22.03.2021": {
+        "data": "22.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "23.02.2021": {
-        "data": "23.02.2021",
+    "23.03.2021": {
+        "data": "23.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "24.02.2021": {
-        "data": "24.02.2021",
+    "24.03.2021": {
+        "data": "24.03.2021",
         "time_ice": "",
         "ice_place": "",
-        "time_ground": "18.45 - 20.00",
-        "gathering_time": "18.30"
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
-    "25.02.2021": {
-        "data": "25.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "25.03.2021": {
+        "data": "25.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "26.02.2021": {
-        "data": "26.02.2021",
-        "time_ice": "21.00 - 22.00",
+    "26.03.2021": {
+        "data": "26.03.2021",
+        "time_ice": "21:00 - 22:00",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "20.15"
+        "gathering_time": "20:15"
     },
-    "27.02.2021": {
-        "data": "27.02.2021",
-        "time_ice": "20.30 - 21.30",
+    "27.03.2021": {
+        "data": "27.03.2021",
+        "time_ice": "20:30 - 21:30",
         "ice_place": "Палац Спорту",
         "time_ground": "",
-        "gathering_time": "19.45"
+        "gathering_time": "19:45"
     },
-    "28.02.2021": {
-        "data": "28.02.2021",
-        "time_ice": "06.15 - 07.45",
+    "28.03.2021": {
+        "data": "28.03.2021",
+        "time_ice": "06:15 - 07:45",
         "ice_place": "Салтівський лід",
         "time_ground": "",
-        "gathering_time": "06.00"
+        "gathering_time": "6:00"
+    },
+    "29.03.2021": {
+        "data": "29.03.2021",
+        "time_ice": "21:00 - 22:00",
+        "ice_place": "Палац Спорту",
+        "time_ground": "",
+        "gathering_time": "20:15"
+    },
+    "30.03.2021": {
+        "data": "30.03.2021",
+        "time_ice": "",
+        "ice_place": "",
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
+    },
+    "31.03.2021": {
+        "data": "31.03.2021",
+        "time_ice": "",
+        "ice_place": "",
+        "time_ground": "17:30 - 19:00",
+        "gathering_time": "17:15"
     },
 };
+
+
+
+
+
