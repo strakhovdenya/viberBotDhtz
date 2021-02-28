@@ -26,7 +26,7 @@ exports.send = function (response) {
     console.log('==================================');
     console.log('==================================');
 
-    if (objDay === 'undefined') {
+    if (typeof objDay === 'undefined') {
         const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
     } else {
         const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
