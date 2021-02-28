@@ -4,9 +4,10 @@ const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const constants = require("./constants.js");
 
-
 exports.send = function (response) {
     const date = new Date();
+
+    date.setDate(date.getDate() + 1);
 
     const day = date.getDate();
     const dayForatted = (day < 10 ? '0' : '') + day;
@@ -15,6 +16,11 @@ exports.send = function (response) {
     const monthForatted = (month < 10 ? '0' : '') + month;
 
     const formattedDate = day + '.' + monthForatted + '.' + date.getFullYear();
+    console.lor('=============================================');
+    console.lor('=============================================');
+    console.log(formattedDate)
+    console.lor('=============================================');
+    console.lor('=============================================');
     const objDay = constants.SHEDULE[formattedDate];
 
     const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n

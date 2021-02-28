@@ -8,6 +8,7 @@ const RichMediaMessage = require('viber-bot').Message.RichMedia;
 
 const sheduleMonth = require('./helpers/shedule_month');
 const sheduleToday = require('./helpers/shedule_today');
+const sheduleTomorrow = require('./helpers/shedule_tomorrow');
 const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
@@ -54,6 +55,8 @@ bot.onTextMessage(/./, (message, response) => {
         sheduleMonth.send(response);
     } else if (message.text === 'shedule_today') {
         sheduleToday.send(response);
+    } else if (message.text === 'shedule_tomorrow') {
+        sheduleTomorrow.send(response);
     } else {
         response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD));
     }

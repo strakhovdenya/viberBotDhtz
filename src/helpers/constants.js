@@ -27,7 +27,7 @@ con.OPTION_KEYBOARD = {
             "BgColor": "#2db9b9",
             "Text": "Рассписание на завтра",
             "ActionType": "reply",
-            "ActionBody": "HalfDayOff"
+            "ActionBody": "shedule_tomorrow"
         }
     ]
 };
