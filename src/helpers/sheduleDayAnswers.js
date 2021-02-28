@@ -1,5 +1,6 @@
 var exports = module.exports = {};
 const TextMessage = require('viber-bot').Message.Text;
+const constants = require("./constants.js");
 
 exports.good = function (response, formattedDate, objDay) {
 
