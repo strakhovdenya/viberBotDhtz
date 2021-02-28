@@ -1,7 +1,7 @@
 var exports = module.exports = {};
 const TextMessage = require('viber-bot').Message.Text;
 
-exports.good = function (response, formattedDate) {
+exports.good = function (response, formattedDate, objDay) {
 
     const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
     Лед на: ${objDay.time_ice}  \r\n
@@ -15,7 +15,7 @@ exports.good = function (response, formattedDate) {
     return [ansver];
 }
 
-exports.bad = function (response, formattedDate) {
+exports.bad = function (response, formattedDate, objDay) {
 
     const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
 
