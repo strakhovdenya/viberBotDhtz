@@ -2,17 +2,10 @@ var exports = module.exports = {};
 
 const sheduleDayAnswers = require("./sheduleDayAnswers.js");
 const constants = require("./constants.js");
+const dateForrmater = require("./dateForrmater.js");
 
 exports.send = function (response) {
-    const date = new Date();
-
-    const day = date.getDate();
-    const dayForatted = (day < 10 ? '0' : '') + day;
-
-    const month = date.getMonth() + 1;
-    const monthForatted = (month < 10 ? '0' : '') + month;
-
-    const formattedDate = dayForatted + '.' + monthForatted + '.' + date.getFullYear();
+    const formattedDate = dateForrmater();
     const objDay = constants.SHEDULE[formattedDate];
 
     let text;
@@ -23,6 +16,6 @@ exports.send = function (response) {
     } else {
         ansver = sheduleDayAnswers.good(response, formattedDate, objDay);
     }
-    
+
     response.send(ansver);
 }
