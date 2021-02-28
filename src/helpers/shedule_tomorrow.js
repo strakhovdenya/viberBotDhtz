@@ -25,11 +25,14 @@ exports.send = function (response) {
     console.log('==================================');
     console.log('==================================');
     console.log('==================================');
-
+    let text;
     if (typeof objDay === 'undefined') {
-        const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
+        console.log('================undefined==================');
+        console.log('================undefined==================');
+        console.log('================undefined==================');
+         text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
     } else {
-        const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
+         text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
     Лед на: ${objDay.time_ice}  \r\n
     Место: ${objDay.ice_place}  \r\n
     Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n
