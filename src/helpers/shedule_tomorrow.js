@@ -16,11 +16,11 @@ exports.send = function (response) {
     const monthForatted = (month < 10 ? '0' : '') + month;
 
     const formattedDate = day + '.' + monthForatted + '.' + date.getFullYear();
-    console.lor('=============================================');
-    console.lor('=============================================');
+    console.log('=============================================');
+    console.log('=============================================');
     console.log(formattedDate)
-    console.lor('=============================================');
-    console.lor('=============================================');
+    console.log('=============================================');
+    console.log('=============================================');
     const objDay = constants.SHEDULE[formattedDate];
 
     const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
