@@ -18,18 +18,9 @@ exports.send = function (response) {
     const formattedDate = dayForatted + '.' + monthForatted + '.' + date.getFullYear();
 
     const objDay = constants.SHEDULE[formattedDate];
-    console.log('==================================');
-    console.log('==================================');
-    console.log('==================================');
-    console.log(objDay);
-    console.log('==================================');
-    console.log('==================================');
-    console.log('==================================');
+
     let text;
     if (typeof objDay === 'undefined') {
-        console.log('================undefined==================');
-        console.log('================undefined==================');
-        console.log('================undefined==================');
          text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
     } else {
          text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
