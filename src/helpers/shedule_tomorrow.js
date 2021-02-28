@@ -19,7 +19,7 @@ exports.send = function (response) {
 
     const objDay = constants.SHEDULE[formattedDate];
 
-    if (objDay === undefined) {
+    if (objDay === 'undefined') {
         const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
     } else {
         const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
