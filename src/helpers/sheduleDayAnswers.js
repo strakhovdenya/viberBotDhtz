@@ -19,8 +19,7 @@ exports.good = function (response, formattedDate, objDay) {
 
 exports.bad = function (response, formattedDate, objDay) {
 
-    const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
-
+    const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) нет(((`;
 
     const ansver1 = new StickerMessage(40133);
     const ansver2 = new TextMessage(text, constants.OPTION_KEYBOARD);
