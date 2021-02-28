@@ -1,7 +1,7 @@
 var exports = module.exports = {};
 
 const TextMessage = require('viber-bot').Message.Text;
-const PictureMessage = require('viber-bot').Message.Picture;
+
 const constants = require("./constants.js");
 
 
