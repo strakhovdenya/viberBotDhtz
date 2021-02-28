@@ -15,22 +15,23 @@ exports.send = function (response) {
     const month = date.getMonth() + 1;
     const monthForatted = (month < 10 ? '0' : '') + month;
 
-    const formattedDate = day + '.' + monthForatted + '.' + date.getFullYear();
-    console.log('=============================================');
-    console.log('=============================================');
-    console.log(formattedDate)
-    console.log('=============================================');
-    console.log('=============================================');
+    const formattedDate = dayForatted + '.' + monthForatted + '.' + date.getFullYear();
+
     const objDay = constants.SHEDULE[formattedDate];
 
-    const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
+    if (objDay === undefined) {
+        const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) ока нет(((`;
+    } else {
+        const text = `${response.userProfile.name} лови рассписание на ${formattedDate}.  \r\n
     Лед на: ${objDay.time_ice}  \r\n
     Место: ${objDay.ice_place}  \r\n
     Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n
     ==========================\r\n
     Время сбора: ${objDay.gathering_time}`;
+    }
 
-    const ansver =new TextMessage(text, constants.OPTION_KEYBOARD);
+
+    const ansver = new TextMessage(text, constants.OPTION_KEYBOARD);
 
     response.send(ansver);
 }
