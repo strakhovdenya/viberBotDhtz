@@ -43,7 +43,6 @@ bot.onSubscribe(response => {
 });
 
 
-
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     // This sample bot can answer only text messages, let's make sure the user is aware of that.
     if (!(message instanceof TextMessage)) {
@@ -53,27 +52,13 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 
 bot.onTextMessage(/./, (message, response) => {
-    console.log('!!!!!!!!!!!!!!!!BEFORE!!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!TOKEN ENV!!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!  '+process.env.MSG_TOKEN+'  !!!!!!!!!!!!!!!!!!!');
 
-    console.log('!!!!!!!!!!!!!!!!TOKEN MSG!!!!!!!!!!!!!!!!!!!')
-    console.log('!!!!!!!!!!!!!!!!  '+message.token+'  !!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-    
-    if(process.env.MSG_TOKEN === message.token){
-        console.log('!!!!!!!!!!!!!!!!!!!!!TOKEN ENV === TOKEN MSG!!!!!!!!!!!!!!!!!!!')
+    // delete duplicate messages when heroku start
+    if (process.env.MSG_TOKEN === message.token) {
         return;
     }
-
     process.env.MSG_TOKEN = message.token;
-    console.log('!!!!!!!!!!!!!!!!AFTER!!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!TOKEN ENV!!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!  '+process.env.MSG_TOKEN+'  !!!!!!!!!!!!!!!!!!!');
 
-    console.log('!!!!!!!!!!!!!!!!TOKEN MSG!!!!!!!!!!!!!!!!!!!')
-    console.log('!!!!!!!!!!!!!!!!  '+message.token+'  !!!!!!!!!!!!!!!!!!!');
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     if (message.text === 'shedule_month') {
         sheduleMonth.send(response);
     } else if (message.text === 'shedule_today') {
