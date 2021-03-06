@@ -42,6 +42,8 @@ bot.onSubscribe(response => {
     say(response, `Hi there ${response.userProfile.name}. I am ${bot.name}! Feel free to ask me if a web site is down for everyone or just you. Just send me a name of a website and I'll do the rest!`);
 });
 
+const messageToken = process.env.MSG_TOKEN || '111';
+
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     // This sample bot can answer only text messages, let's make sure the user is aware of that.
     if (!(message instanceof TextMessage)) {
@@ -51,6 +53,12 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 
 bot.onTextMessage(/./, (message, response) => {
+    if(messageToken === message.token){
+        return;
+    }
+
+    process.env.MSG_TOKEN = message.token;
+
     if (message.text === 'shedule_month') {
         sheduleMonth.send(response);
     } else if (message.text === 'shedule_today') {
