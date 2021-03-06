@@ -57,7 +57,10 @@ bot.onTextMessage(/./, (message, response) => {
     if (process.env.MSG_TOKEN === message.token) {
         return;
     }
-    process.env.MSG_TOKEN = message.token;
+    
+    if (typeof process.env.MSG_TOKEN === 'undefined') {
+        process.env.MSG_TOKEN = message.token;
+    }
 
     if (message.text === 'shedule_month') {
         sheduleMonth.send(response);
