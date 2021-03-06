@@ -60,10 +60,11 @@ bot.onTextMessage(/./, (message, response) => {
     console.log('!!!!!!!!!!!!!!!!TOKEN MSG!!!!!!!!!!!!!!!!!!!')
     console.log('!!!!!!!!!!!!!!!!  '+message.token+'  !!!!!!!!!!!!!!!!!!!');
     console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-    // if(process.env.MSG_TOKEN === message.token){
-    //     console.log('!!!!!!!!!!!!!!!!!!!!!TOKEN ENV === TOKEN MSG!!!!!!!!!!!!!!!!!!!')
-    //     return;
-    // }
+    
+    if(process.env.MSG_TOKEN === message.token){
+        console.log('!!!!!!!!!!!!!!!!!!!!!TOKEN ENV === TOKEN MSG!!!!!!!!!!!!!!!!!!!')
+        return;
+    }
 
     process.env.MSG_TOKEN = message.token;
     console.log('!!!!!!!!!!!!!!!!AFTER!!!!!!!!!!!!!!!!!!!');
