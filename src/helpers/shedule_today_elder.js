@@ -6,7 +6,7 @@ const dateForrmater = require("./dateForrmater.js");
 
 exports.send = function (response) {
     const formattedDate = dateForrmater();
-    const objDay = constants.SHEDULE[formattedDate];
+    const objDay = constants.SHEDULE_JUNIOR[formattedDate];
 
     let text;
     let ansver;

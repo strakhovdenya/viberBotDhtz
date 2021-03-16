@@ -1,13 +1,12 @@
 var exports = module.exports = {};
 
-
-const constants = require("./constants.js");
 const sheduleDayAnswers = require("./sheduleDayAnswers.js");
+const constants = require("./constants.js");
 const dateForrmater = require("./dateForrmater.js");
 
 exports.send = function (response) {
-    const formattedDate = dateForrmater(1);
-    const objDay = constants.SHEDULE[formattedDate];
+    const formattedDate = dateForrmater();
+    const objDay = constants.SHEDULE_JUNIOR[formattedDate];
 
     let text;
     let ansver;
@@ -17,8 +16,6 @@ exports.send = function (response) {
     } else {
         ansver = sheduleDayAnswers.good(response, formattedDate, objDay);
     }
-
-
 
     response.send(ansver);
 }

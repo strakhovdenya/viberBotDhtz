@@ -1,9 +1,18 @@
 var con = module.exports = {};
 
-con.OPTION_KEYBOARD = {
+con.OPTION_KEYBOARD_JUNIOR = {
     "Type": "keyboard",
     "Revision": 1,
     "Buttons": [
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#b92d5e",
+            "Text": "Рассписание младшие",
+            //TextVAlign, TextHAlign : using default (middle, center)
+            // "ActionType": "reply",
+            // "ActionBody": "shedule_month_junior"
+        },
         {
             "Columns": 6,
             "Rows": 1,
@@ -11,7 +20,7 @@ con.OPTION_KEYBOARD = {
             "Text": "Рассписание на МАРТ",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "shedule_month"
+            "ActionBody": "shedule_month_junior"
         },
         {
             "Columns": 6,
@@ -19,7 +28,7 @@ con.OPTION_KEYBOARD = {
             "BgColor": "#2db9b9",
             "Text": "Рассписание на сегодня",
             "ActionType": "reply",
-            "ActionBody": "shedule_today"
+            "ActionBody": "shedule_today_junior"
         },
         {
             "Columns": 6,
@@ -27,7 +36,7 @@ con.OPTION_KEYBOARD = {
             "BgColor": "#2db9b9",
             "Text": "Рассписание на завтра",
             "ActionType": "reply",
-            "ActionBody": "shedule_tomorrow"
+            "ActionBody": "shedule_tomorrow_junior"
         }
     ]
 };
@@ -39,7 +48,7 @@ con.OPTION_KEYBOARD_START = {
         {
             "Columns": 3,
             "Rows": 2,
-            "BgColor": "#1860ec",
+            "BgColor": "#3c7af1",
             "Text": "Старшие",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
@@ -48,7 +57,7 @@ con.OPTION_KEYBOARD_START = {
         {
             "Columns": 3,
             "Rows": 2,
-            "BgColor": "#1860ec",
+            "BgColor": "#3c7af1",
             "Text": "Младшие",
             "ActionType": "reply",
             "ActionBody": "junior"
@@ -56,7 +65,7 @@ con.OPTION_KEYBOARD_START = {
     ]
 };
 
-con.SHEDULE = {
+con.SHEDULE_JUNIOR = {
     "01.03.2021": {
         "data": "01.03.2021",
         "time_ice": "21:00 - 22:00",

@@ -6,9 +6,9 @@ const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
 
-const sheduleMonth = require('./helpers/shedule_month');
-const sheduleToday = require('./helpers/shedule_today');
-const sheduleTomorrow = require('./helpers/shedule_tomorrow');
+const sheduleMonth = require('./helpers/shedule_month_junior');
+const sheduleTodayJunior = require('./helpers/shedule_today_junior');
+const sheduleTomorrowJunior = require('./helpers/shedule_tomorrow_elder');
 const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
@@ -62,12 +62,14 @@ bot.onTextMessage(/./, (message, response) => {
         process.env.MSG_TOKEN = message.token;
     }
 
-    if (message.text === 'shedule_month') {
+    if (message.text === 'shedule_month_junior') {
         sheduleMonth.send(response);
-    } else if (message.text === 'shedule_today') {
-        sheduleToday.send(response);
-    } else if (message.text === 'shedule_tomorrow') {
-        sheduleTomorrow.send(response);
+    } else if (message.text === 'shedule_today_junior') {
+        sheduleTodayJunior.send(response);
+    } else if (message.text === 'shedule_tomorrow_junior') {
+        sheduleTomorrowJunior.send(response);
+    } else if (message.text === 'junior') {
+        response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
     } else {
         response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }
