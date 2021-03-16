@@ -62,6 +62,10 @@ bot.onTextMessage(/./, (message, response) => {
         process.env.MSG_TOKEN = message.token;
     }
 
+    console.log('===============================')
+    console.log(message.text)
+    console.log('===============================')
+
     if (message.text === 'shedule_month_junior') {
         sheduleMonth.send(response);
     } else if (message.text === 'shedule_today_junior') {
