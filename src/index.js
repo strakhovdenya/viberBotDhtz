@@ -57,7 +57,7 @@ bot.onTextMessage(/./, (message, response) => {
     if (process.env.MSG_TOKEN === message.token) {
         return;
     }
-    
+
     if (typeof process.env.MSG_TOKEN === 'undefined') {
         process.env.MSG_TOKEN = message.token;
     }
@@ -69,7 +69,7 @@ bot.onTextMessage(/./, (message, response) => {
     } else if (message.text === 'shedule_tomorrow') {
         sheduleTomorrow.send(response);
     } else {
-        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD));
+        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }
 });
 

@@ -32,6 +32,30 @@ con.OPTION_KEYBOARD = {
     ]
 };
 
+con.OPTION_KEYBOARD_START = {
+    "Type": "keyboard",
+    "Revision": 1,
+    "Buttons": [
+        {
+            "Columns": 3,
+            "Rows": 2,
+            "BgColor": "#1860ec",
+            "Text": "Старшие",
+            //TextVAlign, TextHAlign : using default (middle, center)
+            "ActionType": "reply",
+            "ActionBody": "elder"
+        },
+        {
+            "Columns": 3,
+            "Rows": 2,
+            "BgColor": "#1860ec",
+            "Text": "Младшие",
+            "ActionType": "reply",
+            "ActionBody": "junior"
+        }
+    ]
+};
+
 con.SHEDULE = {
     "01.03.2021": {
         "data": "01.03.2021",
