@@ -10,8 +10,8 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "BgColor": "#b92d5e",
             "Text": "Рассписание младшие",
             //TextVAlign, TextHAlign : using default (middle, center)
-            // "ActionType": "reply",
-            // "ActionBody": "shedule_month_junior"
+            "ActionType": "reply",
+            "ActionBody": "title"
         },
         {
             "Columns": 6,
