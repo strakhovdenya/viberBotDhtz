@@ -6,9 +6,14 @@ const TextMessage = require('viber-bot').Message.Text;
 const PictureMessage = require('viber-bot').Message.Picture;
 const RichMediaMessage = require('viber-bot').Message.RichMedia;
 
-const sheduleMonth = require('./helpers/shedule_month_junior');
+const sheduleMonthJunior = require('./helpers/shedule_month_junior');
 const sheduleTodayJunior = require('./helpers/shedule_today_junior');
 const sheduleTomorrowJunior = require('./helpers/shedule_tomorrow_junior');
+
+const sheduleMonthElder = require('./helpers/shedule_month_elder');
+const sheduleTodayElder = require('./helpers/shedule_today_elder');
+const sheduleTomorrowElder = require('./helpers/shedule_tomorrow_elder');
+
 const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
@@ -62,24 +67,22 @@ bot.onTextMessage(/./, (message, response) => {
         process.env.MSG_TOKEN = message.token;
     }
 
-    console.log('===============================')
-    console.log(message.text)
-    console.log('===============================')
-
     if (message.text === 'shedule_month_junior') {
-        sheduleMonth.send(response);
+        sheduleMonthJunior.send(response);
+    } else if (message.text === 'shedule_month_elder') {
+        sheduleMonthElder.send(response);
     } else if (message.text === 'shedule_today_junior') {
         sheduleTodayJunior.send(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
         sheduleTomorrowJunior.send(response);
     } else if (message.text === 'shedule_today_elder') {
-        sheduleTodayJunior.send(response);
+        sheduleTodayElder.send(response);
     } else if (message.text === 'shedule_tomorrow_elder') {
-        sheduleTomorrowJunior.send(response);
+        sheduleTomorrowElder.send(response);
     } else if (message.text === 'junior') {
         response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
     } else if (message.text === 'elder') {
-        response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_ELDER));
+        response.send(new TextMessage(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
         response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     } else {
