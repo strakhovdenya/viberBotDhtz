@@ -70,6 +70,8 @@ bot.onTextMessage(/./, (message, response) => {
         sheduleTomorrowJunior.send(response);
     } else if (message.text === 'junior') {
         response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
+    } else if (message.text === 'start') {
+        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     } else {
         response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }

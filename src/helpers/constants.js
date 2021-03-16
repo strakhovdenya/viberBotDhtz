@@ -37,6 +37,14 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Text": "Рассписание на завтра",
             "ActionType": "reply",
             "ActionBody": "shedule_tomorrow_junior"
+        },
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#b92d5e",
+            "Text": "вернуться для выбора (младшие/старшие)",
+            "ActionType": "reply",
+            "ActionBody": "start"
         }
     ]
 };
