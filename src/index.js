@@ -8,7 +8,7 @@ const RichMediaMessage = require('viber-bot').Message.RichMedia;
 
 const sheduleMonth = require('./helpers/shedule_month_junior');
 const sheduleTodayJunior = require('./helpers/shedule_today_junior');
-const sheduleTomorrowJunior = require('./helpers/shedule_tomorrow_elder');
+const sheduleTomorrowJunior = require('./helpers/shedule_tomorrow_junior');
 const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
@@ -72,8 +72,14 @@ bot.onTextMessage(/./, (message, response) => {
         sheduleTodayJunior.send(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
         sheduleTomorrowJunior.send(response);
+    } else if (message.text === 'shedule_today_elder') {
+        sheduleTodayJunior.send(response);
+    } else if (message.text === 'shedule_tomorrow_elder') {
+        sheduleTomorrowJunior.send(response);
     } else if (message.text === 'junior') {
         response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
+    } else if (message.text === 'elder') {
+        response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
         response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     } else {

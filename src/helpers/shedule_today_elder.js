@@ -1,20 +1,20 @@
 var exports = module.exports = {};
 
-const sheduleDayAnswers = require("./sheduleDayAnswers.js");
+const sheduleDayAnswersElder = require("./sheduleDayAnswersElder.js");
 const constants = require("./constants.js");
 const dateForrmater = require("./dateForrmater.js");
 
 exports.send = function (response) {
     const formattedDate = dateForrmater();
-    const objDay = constants.SHEDULE_JUNIOR[formattedDate];
+    const objDay = constants.SHEDULE_ELDER[formattedDate];
 
     let text;
     let ansver;
 
     if (typeof objDay === 'undefined') {
-        ansver = sheduleDayAnswers.bad(response, formattedDate, objDay);
+        ansver = sheduleDayAnswersElder.bad(response, formattedDate, objDay);
     } else {
-        ansver = sheduleDayAnswers.good(response, formattedDate, objDay);
+        ansver = sheduleDayAnswersElder.good(response, formattedDate, objDay);
     }
 
     response.send(ansver);

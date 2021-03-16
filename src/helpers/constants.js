@@ -7,15 +7,6 @@ con.OPTION_KEYBOARD_JUNIOR = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#b92d5e",
-            "Text": "Рассписание младшие",
-            //TextVAlign, TextHAlign : using default (middle, center)
-            "ActionType": "reply",
-            "ActionBody": "title"
-        },
-        {
-            "Columns": 6,
-            "Rows": 1,
             "BgColor": "#2db9b9",
             "Text": "Рассписание на МАРТ",
             //TextVAlign, TextHAlign : using default (middle, center)
@@ -41,7 +32,47 @@ con.OPTION_KEYBOARD_JUNIOR = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#b92d5e",
+            "BgColor": "#b8426b",
+            "Text": "вернуться для выбора (младшие/старшие)",
+            "ActionType": "reply",
+            "ActionBody": "start"
+        }
+    ]
+};
+
+con.OPTION_KEYBOARD_ELDER = {
+    "Type": "keyboard",
+    "Revision": 1,
+    "Buttons": [
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#2db9b9",
+            "Text": "Рассписание на МАРТ",
+            //TextVAlign, TextHAlign : using default (middle, center)
+            "ActionType": "reply",
+            "ActionBody": "shedule_month_elder"
+        },
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#2db9b9",
+            "Text": "Рассписание на сегодня",
+            "ActionType": "reply",
+            "ActionBody": "shedule_today_elder"
+        },
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#2db9b9",
+            "Text": "Рассписание на завтра",
+            "ActionType": "reply",
+            "ActionBody": "shedule_tomorrow_elder"
+        },
+        {
+            "Columns": 6,
+            "Rows": 1,
+            "BgColor": "#b8426b",
             "Text": "вернуться для выбора (младшие/старшие)",
             "ActionType": "reply",
             "ActionBody": "start"
@@ -290,7 +321,11 @@ con.SHEDULE_JUNIOR = {
         "ice_place": "",
         "time_ground": "17:30 - 19:00",
         "gathering_time": "17:15"
-    },
+    }
+};
+
+con.SHEDULE_ELDER = {
+
 };
 
 
