@@ -92,7 +92,8 @@ con.OPTION_KEYBOARD_START = {
             "TextSize": "large",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "elder"
+            "ActionBody": "elder",
+            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616099709/dhtz/elder_start_mjd43u.png"
         },
         {
             "Columns": 3,
@@ -101,7 +102,8 @@ con.OPTION_KEYBOARD_START = {
             "Text": "Младшие",
             "TextSize": "large",
             "ActionType": "reply",
-            "ActionBody": "junior"
+            "ActionBody": "junior",
+            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616099709/dhtz/junior_start_qmnncr.jpg"
         }
     ]
 };
@@ -326,9 +328,7 @@ con.SHEDULE_JUNIOR = {
     }
 };
 
-con.SHEDULE_ELDER = {
-
-};
+con.SHEDULE_ELDER = {};
 
 
 
