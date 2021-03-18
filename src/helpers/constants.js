@@ -89,6 +89,7 @@ con.OPTION_KEYBOARD_START = {
             "Rows": 2,
             "BgColor": "#3c7af1",
             "Text": "Старшие",
+            "TextSize": "large",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
             "ActionBody": "elder"
@@ -98,6 +99,7 @@ con.OPTION_KEYBOARD_START = {
             "Rows": 2,
             "BgColor": "#3c7af1",
             "Text": "Младшие",
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "junior"
         }

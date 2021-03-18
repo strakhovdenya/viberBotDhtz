@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersJunior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +77,9 @@
       <workItem from="1614921851321" duration="539000" />
       <workItem from="1615018638594" duration="840000" />
       <workItem from="1615029361725" duration="3329000" />
-      <workItem from="1615925333550" duration="2883000" />
+      <workItem from="1615925333550" duration="3467000" />
+      <workItem from="1615928846321" duration="40000" />
+      <workItem from="1616098235816" duration="427000" />
     </task>
     <servers />
   </component>
