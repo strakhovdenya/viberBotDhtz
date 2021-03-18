@@ -93,7 +93,7 @@ con.OPTION_KEYBOARD_START = {
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
             "ActionBody": "elder",
-            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616099709/dhtz/elder_start_mjd43u.png"
+            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616100349/dhtz/elder_start_fvt3uy.png"
         },
         {
             "Columns": 3,
@@ -103,7 +103,7 @@ con.OPTION_KEYBOARD_START = {
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "junior",
-            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616099709/dhtz/junior_start_qmnncr.jpg"
+            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616100340/dhtz/junior_start_vzrini.jpg"
         }
     ]
 };
