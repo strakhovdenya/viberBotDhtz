@@ -92,8 +92,7 @@ con.OPTION_KEYBOARD_START = {
             "TextSize": "large",
             //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
-            "ActionBody": "elder",
-            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616100349/dhtz/elder_start_fvt3uy.png"
+            "ActionBody": "elder"
         },
         {
             "Columns": 3,
@@ -102,8 +101,7 @@ con.OPTION_KEYBOARD_START = {
             "Text": "Младшие",
             "TextSize": "large",
             "ActionType": "reply",
-            "ActionBody": "junior",
-            "Image": "https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616100340/dhtz/junior_start_vzrini.jpg"
+            "ActionBody": "junior"
         }
     ]
 };
