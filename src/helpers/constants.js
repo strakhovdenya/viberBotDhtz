@@ -33,7 +33,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#b8426b",
-            "Text": "вернуться для выбора (младшие/старшие)",
+            "Text": "(!)Вернуться для выбора (младшие/старшие)(!)",
             "ActionType": "reply",
             "ActionBody": "start"
         }
@@ -56,7 +56,7 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
+            "BgColor": "#818585",
             "Text": "Рассписание на сегодня",
             "ActionType": "reply",
             "ActionBody": "shedule_today_elder"
@@ -64,7 +64,7 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
+            "BgColor": "#818585",
             "Text": "Рассписание на завтра",
             "ActionType": "reply",
             "ActionBody": "shedule_tomorrow_elder"
@@ -73,7 +73,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#b8426b",
-            "Text": "вернуться для выбора (младшие/старшие)",
+            "Text": "Вернуться для выбора (младшие/старшие)",
             "ActionType": "reply",
             "ActionBody": "start"
         }
