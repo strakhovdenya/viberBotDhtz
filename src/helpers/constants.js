@@ -58,7 +58,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Rows": 1,
             "BgColor": "#c3c6c6",
             "Text": "Рассписание на сегодня",
-            "ActionType": "none",//"reply",
+            "ActionType": "reply",//"reply",
             "ActionBody": "shedule_today_elder"
         },
         {
@@ -66,7 +66,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Rows": 1,
             "BgColor": "#c3c6c6",
             "Text": "Рассписание на завтра",
-            "ActionType": "none",//"reply",
+            "ActionType": "reply",//"reply",
             "ActionBody": "shedule_tomorrow_elder"
         },
         {
