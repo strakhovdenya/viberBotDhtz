@@ -59,7 +59,7 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#c3c6c6",
+            "BgColor": "#2db9b9",
             "Text": "Рассписание на сегодня",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
@@ -68,7 +68,7 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#c3c6c6",
+            "BgColor": "#2db9b9",
             "Text": "Рассписание на завтра",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
