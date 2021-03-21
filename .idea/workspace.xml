@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/sheduleElder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/helpers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/constants" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\courses\vibetHelper\src\constants" />
       <recent name="D:\courses\vibetHelper\src\helpers" />
       <recent name="D:\courses\vibetHelper\public" />
       <recent name="D:\courses\vibetHelper" />
@@ -83,7 +81,7 @@
       <workItem from="1615928846321" duration="40000" />
       <workItem from="1616098235816" duration="2840000" />
       <workItem from="1616225416115" duration="1245000" />
-      <workItem from="1616315197967" duration="324000" />
+      <workItem from="1616315197967" duration="997000" />
     </task>
     <servers />
   </component>

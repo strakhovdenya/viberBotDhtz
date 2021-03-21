@@ -9,7 +9,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Rows": 1,
             "BgColor": "#2db9b9",
             "Text": "Рассписание на МАРТ",
-            //TextVAlign, TextHAlign : using default (middle, center)
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_junior"
         },
@@ -18,6 +18,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Rows": 1,
             "BgColor": "#2db9b9",
             "Text": "Рассписание на сегодня",
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_today_junior"
         },
@@ -26,6 +27,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Rows": 1,
             "BgColor": "#2db9b9",
             "Text": "Рассписание на завтра",
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_tomorrow_junior"
         },
@@ -49,7 +51,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Rows": 1,
             "BgColor": "#2db9b9",
             "Text": "Рассписание на МАРТ",
-            //TextVAlign, TextHAlign : using default (middle, center)
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_elder"
         },
@@ -58,6 +60,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Rows": 1,
             "BgColor": "#c3c6c6",
             "Text": "Рассписание на сегодня",
+            "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_today_elder"
         },
@@ -66,6 +69,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Rows": 1,
             "BgColor": "#c3c6c6",
             "Text": "Рассписание на завтра",
+            "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_tomorrow_elder"
         },
@@ -73,6 +77,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#b8426b",
+            "TextSize": "large",
             "Text": "Вернуться для выбора (младшие/старшие)",
             "ActionType": "reply",
             "ActionBody": "start"
@@ -90,7 +95,6 @@ con.OPTION_KEYBOARD_START = {
             "BgColor": "#3c7af1",
             "Text": "Старшие",
             "TextSize": "large",
-            //TextVAlign, TextHAlign : using default (middle, center)
             "ActionType": "reply",
             "ActionBody": "elder"
         },
