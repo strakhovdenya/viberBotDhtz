@@ -11,7 +11,7 @@ exports.send = function(response){
     response.send([
             new PictureMessage(SCHEDULE_URL, null, SCHEDULE_URL),
             // new StickerMessage(40133),
-            new TextMessage(`${response.userProfile.name} лови рассписание на месяц для старших`, constants.OPTION_KEYBOARD_ELDER),
+            new TextMessage(`${response.userProfile.name} лови расписание на месяц для старших`, constants.OPTION_KEYBOARD_ELDER),
         ]
     );
 }

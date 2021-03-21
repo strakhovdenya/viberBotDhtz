@@ -5,7 +5,7 @@ const constants = require("./constants.js");
 
 exports.good = function (response, formattedDate, objDay) {
 
-    const text = `${response.userProfile.name} лови рассписание на ${formattedDate} для старших.  \r\n
+    const text = `${response.userProfile.name} лови расписание на ${formattedDate} для старших.  \r\n
     (snowflake)Лед на: ${objDay.time_ice}  \r\n
     (car)Место: ${objDay.ice_place}  \r\n
     (run)Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n

@@ -8,7 +8,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на МАРТ",
+            "Text": "Расписание на МАРТ",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_junior"
@@ -17,7 +17,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на сегодня",
+            "Text": "Расписание на сегодня",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_today_junior"
@@ -26,7 +26,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на завтра",
+            "Text": "Расписание на завтра",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_tomorrow_junior"
@@ -51,7 +51,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на МАРТ",
+            "Text": "Расписание на МАРТ",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_elder"
@@ -60,7 +60,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на сегодня",
+            "Text": "Расписание на сегодня",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_today_elder"
@@ -69,7 +69,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Рассписание на завтра",
+            "Text": "Расписание на завтра",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_tomorrow_elder"
