@@ -36,6 +36,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Rows": 1,
             "BgColor": "#b8426b",
             "Text": "Вернуться для выбора (младшие/старшие)",
+            "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "start"
         }
