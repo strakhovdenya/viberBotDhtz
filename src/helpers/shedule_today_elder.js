@@ -1,7 +1,7 @@
 var exports = module.exports = {};
 
 const sheduleDayAnswersElder = require("./sheduleDayAnswersElder.js");
-const constants = require("./constants.js");
+const constants = require("../constants/sheduleElder.js");
 const dateForrmater = require("./dateForrmater.js");
 
 exports.send = function (response) {
