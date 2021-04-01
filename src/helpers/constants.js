@@ -16,8 +16,9 @@ con.OPTION_KEYBOARD_JUNIOR = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Расписание на сегодня",
+            // "BgColor": "#2db9b9",
+            "BgColor": "#adaeae",
+            "Text": "Расписание на сегодня<br>(нет информации)",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_today_junior"
@@ -25,8 +26,9 @@ con.OPTION_KEYBOARD_JUNIOR = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Расписание на завтра",
+            // "BgColor": "#2db9b9",
+            "BgColor": "#adaeae",
+            "Text": "Расписание на завтра<br>(нет информации)",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_tomorrow_junior"
@@ -59,8 +61,9 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Расписание на сегодня",
+            // "BgColor": "#2db9b9",
+            "BgColor": "#adaeae",
+            "Text": "Расписание на сегодня<br>(нет информации)",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_today_elder"
@@ -68,8 +71,9 @@ con.OPTION_KEYBOARD_ELDER = {
         {
             "Columns": 6,
             "Rows": 1,
-            "BgColor": "#2db9b9",
-            "Text": "Расписание на завтра",
+            // "BgColor": "#2db9b9",
+            "BgColor": "#adaeae",
+            "Text": "Расписание на завтра<br>(нет информации)",
             "TextSize": "large",
             "ActionType": "reply",//"reply",
             "ActionBody": "shedule_tomorrow_elder"
