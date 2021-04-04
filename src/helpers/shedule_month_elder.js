@@ -5,7 +5,7 @@ const PictureMessage = require('viber-bot').Message.Picture;
 const constants = require("./constants.js");
 const StickerMessage = require('viber-bot').Message.Sticker;
 
-const SCHEDULE_URL = 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1616099041/dhtz/mart_elder_2021_lj7uzc.png';
+const SCHEDULE_URL = 'https://res.cloudinary.com/hxrdi6ylu/image/upload/v1617507898/dhtz/older_april_crvvpg.png';
 
 exports.send = function(response){
     response.send([

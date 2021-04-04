@@ -8,7 +8,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Расписание на МАРТ",
+            "Text": "Расписание на АПРЕЛЬ",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_junior"
@@ -53,7 +53,7 @@ con.OPTION_KEYBOARD_ELDER = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Расписание на МАРТ",
+            "Text": "Расписание на АПРЕЛЬ",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_elder"
