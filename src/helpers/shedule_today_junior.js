@@ -11,10 +11,9 @@ exports.send = function (response) {
     const currentMongoDate = mongoDate();
 
     const scheduleDay = Schedule.find({day: {$eq: currentMongoDate}});
-    scheduleDay.each(function(err, doc) {
-
-        console.log(doc);
-
+    scheduleDay.toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);
     });
 
     const objDay = constants.SHEDULE_JUNIOR[formattedDate];
