@@ -3,7 +3,7 @@ var exports = module.exports = {};
 
 const constants = require("../constants/sheduleJunior.js");
 const sheduleDayAnswersJunior = require("./sheduleDayAnswersJunior.js");
-const dateForrmater = require("./dateForrmater.js");
+const dateForrmater = require("./dateFormatter.js");
 
 exports.send = function (response) {
     const formattedDate = dateForrmater(1);
