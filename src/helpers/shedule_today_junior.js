@@ -6,11 +6,11 @@ const dateFormatter = require("./dateFormatter.js");
 const mongoDate = require("./mongoDateFormatter.js");
 const currentMonth = require("./currentMonthYearFormatter.js");
 const Schedule = require('../models/schedule');
-exports.send = function (response) {
+exports.send = async function (response) {
     const formattedDate = dateFormatter();
     const currentMongoDate = mongoDate();
 
-    const scheduleDay = Schedule.find({day: {$eq: currentMongoDate}});
+    const scheduleDay = await Schedule.find({day: {$eq: currentMongoDate}});
     scheduleDay.toArray(function(err, result) {
         if (err) throw err;
         console.log(result);
