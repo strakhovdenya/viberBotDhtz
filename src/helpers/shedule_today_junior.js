@@ -10,7 +10,7 @@ exports.send = async function (response) {
     const formattedDate = dateFormatter();
     const currentMongoDate = mongoDate();
 
-    const scheduleDay = await Schedule.find({day: {$eq: formattedDate}});
+    const scheduleDay = await Schedule.find({data: {$eq: formattedDate}});
     console.log(currentMongoDate);
     console.log(formattedDate);
     console.log(scheduleDay);
