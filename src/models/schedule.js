@@ -3,7 +3,7 @@ const mogoose = require('mongoose');
 const config = require('../config/db');
 
 const ScheduleSchema = mogoose.Schema({
-    day: {
+    data: {
         type: String,
         require: true
     },
