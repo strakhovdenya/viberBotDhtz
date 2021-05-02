@@ -10,10 +10,11 @@ exports.send = async function (response) {
     const scheduleDay = await Schedule.find({data: {$eq: formattedDate}});
 
     let [objDay] = scheduleDay;
-
+    console.log(objDay);
     if (typeof objDay === 'undefined') {
         objDay = constants.SHEDULE_JUNIOR[formattedDate];
     }
+    console.log(objDay);
 
     if (typeof objDay === 'undefined') {
         ansver = sheduleDayAnswersJunior.bad(response, formattedDate, objDay);
