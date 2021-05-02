@@ -1,5 +1,5 @@
 const mogoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+
 const config = require('../config/db');
 
 const ScheduleSchema = mogoose.Schema({
