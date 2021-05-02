@@ -11,7 +11,12 @@ exports.send = function (response) {
     const currentMongoDate = mongoDate();
 
     const scheduleDay = Schedule.find({day: {$eq: currentMongoDate}});
-    console.log(scheduleDay)
+    scheduleDay.each(function(err, doc) {
+
+        console.log(doc);
+
+    });
+
     const objDay = constants.SHEDULE_JUNIOR[formattedDate];
 
     let ansver;
