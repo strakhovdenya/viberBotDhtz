@@ -3,8 +3,7 @@
 const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 const TextMessage = require('viber-bot').Message.Text;
-const PictureMessage = require('viber-bot').Message.Picture;
-const RichMediaMessage = require('viber-bot').Message.RichMedia;
+
 
 const sheduleMonthJunior = require('./helpers/shedule_month_junior');
 const sheduleTodayJunior = require('./helpers/shedule_today_junior');
@@ -17,9 +16,21 @@ const sheduleTomorrowElder = require('./helpers/shedule_tomorrow_elder');
 const loggerCreator = require('./helpers/logger');
 const constants = require("./helpers/constants.js");
 
-const request = require('request');
+const mongoose = require('mongoose');
+const config = require('./config/db');
 
 require('dotenv').config();
+
+mongoose.connect(config.db, {useNewUrlParser: true, useUnifiedTopology: true});
+
+mongoose.connection.on('connected', () => {
+    console.log('we connected to mongoDb');
+})
+
+mongoose.connection.on('error', (err) => {
+    console.log('we didnt connected: ' + err);
+})
+
 
 function say(response, message) {
     response.send(new TextMessage(message));
