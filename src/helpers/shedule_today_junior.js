@@ -11,7 +11,7 @@ exports.send = async function (response) {
     const currentMongoDate = mongoDate();
 
     const scheduleDay = await Schedule.find({day: {$eq: currentMongoDate}});
-    scheduleDay.toArray(function(err, result) {
+    scheduleDay.each(function(err, result) {
         if (err) throw err;
         console.log(result);
     });
