@@ -10,11 +10,8 @@ exports.send = async function (response) {
     const formattedDate = dateFormatter();
     const currentMongoDate = mongoDate();
 
-    const scheduleDay = await Schedule.find({day: {$eq: currentMongoDate}});
-    scheduleDay.each(function(err, result) {
-        if (err) throw err;
-        console.log(result);
-    });
+    const scheduleDay = await Schedule.find({day: {$eq: currentMongoDate}}).limit(1);
+    console.log(scheduleDay);
 
     const objDay = constants.SHEDULE_JUNIOR[formattedDate];
 
