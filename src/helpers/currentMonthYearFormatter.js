@@ -7,7 +7,7 @@ module.exports = function (additionalDays = 0) {
     const month = date.getMonth() + 1;
     const monthFormatted = (month < 10 ? '0' : '') + month;
 
-    const formattedDate = date.getFullYear() + '.' + monthFormatted;
+    const formattedDate = date.getFullYear() + '-' + monthFormatted;
 
     return formattedDate;
 }
