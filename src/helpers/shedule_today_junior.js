@@ -4,15 +4,18 @@ const sheduleDayAnswersJunior = require("./sheduleDayAnswersJunior.js");
 const constants = require("../constants/sheduleJunior.js");
 const dateFormatter = require("./dateFormatter.js");
 const Schedule = require('../models/schedule');
-exports.send = async function (response) {
+exports.send = async
+
+function (response) {
     const formattedDate = dateFormatter();
 
     const scheduleDay = await Schedule.find({data: {$eq: formattedDate}});
 
-    let [objDay] =  scheduleDay;
-    console.log(objDay);
+    let [objDay] = scheduleDay;
+    if (typeof objDay === 'undefined') {
+        objDay = constants.SHEDULE_JUNIOR[formattedDate];
+    }
 
-     objDay = constants.SHEDULE_JUNIOR[formattedDate];
 
     let ansver;
 
