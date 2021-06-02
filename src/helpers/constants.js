@@ -8,7 +8,7 @@ con.OPTION_KEYBOARD_JUNIOR = {
             "Columns": 6,
             "Rows": 1,
             "BgColor": "#2db9b9",
-            "Text": "Расписание на АПРЕЛЬ",
+            "Text": "Расписание сборов ИЮНЬ",
             "TextSize": "large",
             "ActionType": "reply",
             "ActionBody": "shedule_month_junior"

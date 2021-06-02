@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" afterDir="false" />
-    </list>
+    <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +88,7 @@
       <workItem from="1617507948465" duration="663000" />
       <workItem from="1617530636863" duration="19000" />
       <workItem from="1618683852765" duration="20000" />
-      <workItem from="1619940019350" duration="6182000" />
+      <workItem from="1619940019350" duration="6454000" />
     </task>
     <servers />
   </component>
