@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/mongo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mongo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/sheduleElder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/sheduleElder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/sheduleJunior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/sheduleJunior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/dateFormatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/dateFormatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersJunior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersJunior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +101,7 @@
       <workItem from="1630642795515" duration="53000" />
       <workItem from="1631121431519" duration="310000" />
       <workItem from="1632397643306" duration="310000" />
-      <workItem from="1632834381905" duration="4195000" />
+      <workItem from="1632834381905" duration="4801000" />
     </task>
     <servers />
   </component>
