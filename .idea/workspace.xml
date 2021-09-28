@@ -3,6 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/mongo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/mongo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/sheduleElder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/sheduleElder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/sheduleJunior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/sheduleJunior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/dateFormatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/dateFormatter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersJunior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersJunior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +45,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1ozAvCaXjWonr5rzE1s2g5omKwH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vibermonth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,16 +69,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="ts.external.directory.path" value="D:\programms\PhpStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\programms\WebStorm 2021.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\courses\vibetHelper\src\config" />
+      <recent name="D:\courses\vibetHelper" />
       <recent name="D:\courses\vibetHelper\src\helpers" />
       <recent name="D:\courses\vibetHelper\src" />
       <recent name="D:\courses\vibetHelper\src\constants" />
-      <recent name="D:\courses\vibetHelper\public" />
-      <recent name="D:\courses\vibetHelper" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,10 +118,22 @@
       <workItem from="1630642795515" duration="53000" />
       <workItem from="1631121431519" duration="310000" />
       <workItem from="1632397643306" duration="310000" />
+      <workItem from="1632834381905" duration="4195000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

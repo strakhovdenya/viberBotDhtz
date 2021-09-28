@@ -1,9 +1,7 @@
-var exports = module.exports = {};
-const TextMessage = require('viber-bot').Message.Text;
-const StickerMessage = require('viber-bot').Message.Sticker;
-const constants = require("./constants.js");
+import * as Bot from "viber-bot";
+import {con as constants} from "./constants.js";
 
-exports.good = function (response, formattedDate, objDay) {
+export const good = function (response, formattedDate, objDay) {
 
     const text = `${response.userProfile.name} лови расписание на ${formattedDate} для младших.  \r\n
     (snowflake)Лед на: ${objDay.time_ice}  \r\n
@@ -12,17 +10,17 @@ exports.good = function (response, formattedDate, objDay) {
     ==========================\r\n
     (time)Время сбора: ${objDay.gathering_time}`;
 
-    const ansver = new TextMessage(text, constants.OPTION_KEYBOARD_JUNIOR);
+    const ansver = new Bot.Message.Text(text, constants.OPTION_KEYBOARD_JUNIOR);
 
     return [ansver];
 }
 
-exports.bad = function (response, formattedDate, objDay) {
+export const bad = function (response, formattedDate, objDay) {
 
     const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) для младших нет (sad)`;
 
-    const ansver1 = new StickerMessage(40133);
-    const ansver2 = new TextMessage(text, constants.OPTION_KEYBOARD_JUNIOR);
+    const ansver1 = new Bot.Message.Sticker(40133);
+    const ansver2 = new Bot.Message.Text(text, constants.OPTION_KEYBOARD_JUNIOR);
 
     return [ansver1,ansver2];
 }

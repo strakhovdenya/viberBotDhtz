@@ -1,11 +1,11 @@
 'use strict';
 
-import bot from "./bot/bot";
-import {runMongo} from './config/mongo'
-import 'dotenv/config';
+import bot from "./bot/bot.js";
+import {runMongo} from './config/mongo.js'
+import 'dotenv/config.js';
 
 
-const http = require('http');
+import * as http from "http";
 const port = process.env.PORT || 8080;
 
 const init = async () => {

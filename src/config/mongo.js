@@ -2,7 +2,7 @@
 import mongoose from 'mongoose';
 
 // @ts-ignore
-import {} from 'dotenv/config';
+import {} from 'dotenv/config.js';
 
 // import  '../app/auth/refreshToken.model.js';
 /**
@@ -35,7 +35,7 @@ mongoose.connection.on('close', () => {
     console.log('Connection mongo Closed')
 })
 
-mongoose.connection.on('error', (error: string) => {
+mongoose.connection.on('error', (error) => {
     console.log('ERROR (mongo): ' + error)
 })
 

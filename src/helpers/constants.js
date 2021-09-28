@@ -1,4 +1,9 @@
-var con = module.exports = {};
+export const con = {
+    OPTION_KEYBOARD_JUNIOR:{},
+    OPTION_KEYBOARD_ELDER:{},
+    OPTION_KEYBOARD_START:{}
+
+}
 
 con.OPTION_KEYBOARD_JUNIOR = {
     "Type": "keyboard",
@@ -114,6 +119,7 @@ con.OPTION_KEYBOARD_START = {
         }
     ]
 };
+
 
 
 

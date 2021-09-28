@@ -1,21 +1,23 @@
-const loggerCreator = require("./helpers/logger");
-const {Bot: ViberBot, BotEvents} = require("viber-bot");
-const sheduleMonthJunior = require("./helpers/shedule_month_junior");
-const sheduleMonthElder = require("./helpers/shedule_month_elder");
-const sheduleTodayJunior = require("./helpers/shedule_today_junior");
-const sheduleTomorrowJunior = require("./helpers/shedule_tomorrow_junior");
-const sheduleTodayElder = require("./helpers/shedule_today_elder");
-const sheduleTomorrowElder = require("./helpers/shedule_tomorrow_elder");
-const constants = require("./helpers/constants.js");
+import createLogger from "../helpers/logger.js";
+import * as Bot from "viber-bot";
+import sheduleMonthJunior from "../helpers/shedule_month_junior.js";
+import sheduleMonthElder from "../helpers/shedule_month_elder.js";
+import sheduleTodayJunior from "../helpers/shedule_today_junior.js";
+import sheduleTomorrowJunior from "../helpers/shedule_tomorrow_junior.js";
+import sheduleTodayElder from "../helpers/shedule_today_elder.js";
+import sheduleTomorrowElder from "../helpers/shedule_tomorrow_elder.js";
+import {con as constants} from "../helpers/constants.js";
+import {} from 'dotenv/config.js';
+
 
 function say(response, message) {
-    response.send(new TextMessage(message));
+    response.send(new Bot.Message.Text(message));
 }
 
-const logger = loggerCreator.createLogger();
+const logger = createLogger();
 
 // Creating the bot with access token, name and avatar
-const bot = new ViberBot(logger, {
+const bot = new Bot.Bot(logger, {
     authToken: process.env.BOT_ACCOUNT_TOKEN, // Learn how to get your access token at developers.viber.com
     name: "dhtz",
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
@@ -25,7 +27,7 @@ const bot = new ViberBot(logger, {
 bot.onError(err => logger.error(err));
 
 bot.onConversationStarted((userProfile, isSubscribed, context, onFinish) => {
-        onFinish(new TextMessage(`Hi, ${userProfile.name}! Nice to meet you.`))
+        onFinish(new Bot.Message.Text(`Hi, ${userProfile.name}! Nice to meet you.`))
     }
 );
 
@@ -35,9 +37,9 @@ bot.onSubscribe(response => {
 });
 
 
-bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
+bot.on("message", (message, response) => {
     // This sample bot can answer only text messages, let's make sure the user is aware of that.
-    if (!(message instanceof TextMessage)) {
+    if (!(message instanceof Bot.Message.Text)) {
         say(response, `Sorry. I can only understand text messages.`);
     }
 });
@@ -67,13 +69,13 @@ bot.onTextMessage(/./, (message, response) => {
     } else if (message.text === 'shedule_tomorrow_elder') {
         sheduleTomorrowElder.send(response);
     } else if (message.text === 'junior') {
-        response.send(new TextMessage(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
+        response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
     } else if (message.text === 'elder') {
-        response.send(new TextMessage(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
+        response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
-        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
+        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     } else {
-        response.send(new TextMessage(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
+        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }
 });
 

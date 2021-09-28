@@ -1,5 +1,4 @@
-module.exports = function (additionalDays = 0) {
-
+export default function dateFormatter(additionalDays = 0) {
     const date = new Date();
 
     date.setDate(date.getDate() + additionalDays);

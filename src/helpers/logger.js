@@ -1,10 +1,8 @@
-var exports = module.exports = {};
-
-const winston = require('winston');
-const toYAML = require('winston-console-formatter');
+import winston from 'winston'
+import toYAML from 'winston-console-formatter';
 
 
-exports.createLogger = function () {
+const createLogger = function () {
     const logger = new winston.Logger({
         level: "error" // We recommend using the debug level for development  error
     });
@@ -12,3 +10,5 @@ exports.createLogger = function () {
     logger.add(winston.transports.Console, toYAML.config());
     return logger;
 }
+
+export default createLogger;

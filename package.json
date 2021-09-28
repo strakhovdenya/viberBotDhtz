@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "isitup-bot",
   "version": "1.0.1",
   "description": "A bot interface to work with Viber API",
