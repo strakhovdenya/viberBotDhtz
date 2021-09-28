@@ -73,8 +73,7 @@ bot.onTextMessage(/./, (message, response) => {
     } else if (message.text === 'elder') {
         response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
-        console.log(Bot)
-        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
+        response.send(Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     } else {
         response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }
