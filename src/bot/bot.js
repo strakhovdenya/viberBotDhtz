@@ -3,12 +3,13 @@ import Bot from "viber-bot";
 
 import sheduleMonthJunior from "../helpers/shedule_month_junior.js";
 import sheduleMonthElder from "../helpers/shedule_month_elder.js";
-import sheduleTodayJunior from "../helpers/shedule_today_junior.js";
+import {default as sheduleTodayJunior} from "../helpers/shedule_today_junior.js";
 import sheduleTomorrowJunior from "../helpers/shedule_tomorrow_junior.js";
 import sheduleTodayElder from "../helpers/shedule_today_elder.js";
 import sheduleTomorrowElder from "../helpers/shedule_tomorrow_elder.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
+import {default} from "winston";
 
 
 
@@ -66,7 +67,7 @@ bot.onTextMessage(/./, (message, response) => {
     } else if (message.text === 'shedule_month_elder') {
         sheduleMonthElder.send(response);
     } else if (message.text === 'shedule_today_junior') {
-        sheduleTodayJunior.send(response);
+        sheduleTodayJunior(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
         sheduleTomorrowJunior.send(response);
     } else if (message.text === 'shedule_today_elder') {
