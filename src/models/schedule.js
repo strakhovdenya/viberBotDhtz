@@ -1,9 +1,13 @@
-const mogoose = require('mongoose');
+import mongoose  from "mongoose";
 
-const config = require('../config/db');
+const Schema = mongoose.Schema;
 
-const ScheduleSchema = mogoose.Schema({
+const ScheduleSchema = new Schema({
     data: {
+        type: String,
+        require: true
+    },
+    year_month: {
         type: String,
         require: true
     },
@@ -21,16 +25,7 @@ const ScheduleSchema = mogoose.Schema({
     }
 });
 
-const Schedule = module.exports = mogoose.model('Schedule', ScheduleSchema);
-
-// module.exports.getUserByLogin = function (login, callback) {
-//     const query = {login: login};
-//     User.findOne(query, callback);
-// }
-//
-// module.exports.getUserById = function (id, callback) {
-//     User.findById(id, callback);
-// }
+export const  ScheduleJunior = mongoose.model('ScheduleJunior', ScheduleSchema);
 
 
 

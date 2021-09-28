@@ -37,7 +37,8 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/helpers" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vibermonth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +50,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="D:\programms\PhpStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,6 +94,10 @@
       <workItem from="1618683852765" duration="20000" />
       <workItem from="1619940019350" duration="6454000" />
       <workItem from="1622657876930" duration="402000" />
+      <workItem from="1622953425688" duration="203000" />
+      <workItem from="1630642795515" duration="53000" />
+      <workItem from="1631121431519" duration="310000" />
+      <workItem from="1632397643306" duration="310000" />
     </task>
     <servers />
   </component>
