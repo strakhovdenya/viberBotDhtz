@@ -1,4 +1,4 @@
-import * as Bot from "viber-bot";
+import Bot from "viber-bot";
 import {con as constants} from "./constants.js";
 
 

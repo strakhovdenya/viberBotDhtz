@@ -1,4 +1,4 @@
-import * as Bot from "viber-bot";
+import Bot from "viber-bot";
 import {con as constants} from "./constants.js";
 
 const SCHEDULE_URL = 'https://res.cloudinary.com/hxrdi6ylu/image/upload/a_-90/v1622657722/dhtz/sbory_junior_fj9mui.jpg';
