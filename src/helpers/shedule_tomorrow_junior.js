@@ -1,12 +1,13 @@
-import {con as constants} from "../constants/sheduleJunior.js";
 import {bad,good} from "./sheduleDayAnswersJunior.js";
 import dateFormatter from "./dateFormatter.js";
+import {ScheduleJunior} from "../models/schedule";
 
-const send = function (response) {
+const send = async function (response) {
     const formattedDate = dateFormatter(1);
-    const objDay = constants.SHEDULE_JUNIOR[formattedDate];
+    const scheduleDay = await ScheduleJunior.find({data: {$eq: formattedDate}});
 
-    let text;
+    let [objDay] = scheduleDay;
+
     let ansver;
 
     if (typeof objDay === 'undefined') {
@@ -14,8 +15,6 @@ const send = function (response) {
     } else {
         ansver = good(response, formattedDate, objDay);
     }
-
-
 
     response.send(ansver);
 }
