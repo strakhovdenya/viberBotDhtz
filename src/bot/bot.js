@@ -3,10 +3,10 @@ import Bot from "viber-bot";
 
 import {default as sheduleMonthJunior} from "../helpers/juniors/shedule_month_junior.js";
 import {default as sheduleMonthElder} from "../helpers/elder/shedule_month_elder.js";
-import {scheduleTodayJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
-import {scheduleTomorrowJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
-import {scheduleTodayElder} from "../helpers/elder/scheduleDaysAnswers.js";
-import {scheduleTomorrowElder} from "../helpers/elder/scheduleDaysAnswers.js";
+import {scheduleTodayJunior} from "../helpers/scheduleDaysAnswers.js";
+import {scheduleTomorrowJunior} from "../helpers/scheduleDaysAnswers.js";
+import {scheduleTodayElder} from "../helpers/scheduleDaysAnswers.js";
+import {scheduleTomorrowElder} from "../helpers/scheduleDaysAnswers.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
 
