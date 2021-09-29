@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_today_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_junior.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/elder/scheduleDaysAnswers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/scheduleJunior.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/juniors/scheduleDaysAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/juniors/scheduleDaysAnswers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/sheduleDayAnswersElder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/elder/sheduleDayAnswersElder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/elder/shedule_month_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_today_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/elder/shedule_today_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/shedule_tomorrow_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/elder/shedule_tomorrow_elder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/scheduleElder.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,11 +65,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\courses\vibetHelper\src\models" />
+      <recent name="D:\courses\vibetHelper\src\helpers\elder" />
       <recent name="D:\courses\vibetHelper\src\config" />
       <recent name="D:\courses\vibetHelper" />
       <recent name="D:\courses\vibetHelper\src\helpers" />
-      <recent name="D:\courses\vibetHelper\src" />
-      <recent name="D:\courses\vibetHelper\src\constants" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\courses\vibetHelper\src\helpers\elder" />
+      <recent name="D:\courses\vibetHelper\src\helpers\juniors" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -104,7 +114,7 @@
       <workItem from="1631121431519" duration="310000" />
       <workItem from="1632397643306" duration="310000" />
       <workItem from="1632834381905" duration="9288000" />
-      <workItem from="1632897983226" duration="3498000" />
+      <workItem from="1632897983226" duration="4857000" />
     </task>
     <servers />
   </component>

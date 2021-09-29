@@ -2,11 +2,11 @@ import createLogger from "../helpers/logger.js";
 import Bot from "viber-bot";
 
 import {default as sheduleMonthJunior} from "../helpers/juniors/shedule_month_junior.js";
-import {default as sheduleMonthElder} from "../helpers/shedule_month_elder.js";
+import {default as sheduleMonthElder} from "../helpers/elder/shedule_month_elder.js";
 import {scheduleTodayJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
 import {scheduleTomorrowJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
-import {default as sheduleTodayElder} from "../helpers/shedule_today_elder.js";
-import {default as sheduleTomorrowElder} from "../helpers/shedule_tomorrow_elder.js";
+import {scheduleTodayElder} from "../helpers/elder/scheduleDaysAnswers.js";
+import {scheduleTomorrowElder} from "../helpers/elder/scheduleDaysAnswers.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
 
@@ -71,9 +71,9 @@ bot.onTextMessage(/./, async (message, response) => {
     } else if (message.text === 'shedule_tomorrow_junior') {
         await scheduleTomorrowJunior(response);
     } else if (message.text === 'shedule_today_elder') {
-        sheduleTodayElder(response);
+        await scheduleTodayElder(response);
     } else if (message.text === 'shedule_tomorrow_elder') {
-        sheduleTomorrowElder(response);
+        await scheduleTomorrowElder(response);
     } else if (message.text === 'junior') {
         response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
     } else if (message.text === 'elder') {

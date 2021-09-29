@@ -1,5 +1,5 @@
 import {bad,good} from "./sheduleDayAnswersJunior.js";
-import {ScheduleJunior} from "../../models/schedule.js";
+import {ScheduleJunior} from "../../models/scheduleJunior.js";
 import dateFormatter from "../dateFormatter.js";
 
 function answerJuniorBinber(date) {
