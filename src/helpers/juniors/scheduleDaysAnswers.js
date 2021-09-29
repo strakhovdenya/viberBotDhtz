@@ -1,4 +1,4 @@
-import {bad,good} from "./sheduleDayAnswersJunior.js";
+import {goodJunior,badJunior} from "../sheduleDayAnswers.js";
 import {ScheduleJunior} from "../../models/scheduleJunior.js";
 import dateFormatter from "../dateFormatter.js";
 
@@ -11,9 +11,9 @@ function answerJuniorBinber(date) {
         let [objDay] = scheduleDay;
 
         if (typeof objDay === 'undefined') {
-            answer = bad(response, date, objDay);
+            answer = badJunior(response, date, objDay);
         } else {
-            answer = good(response, date, objDay);
+            answer = goodJunior(response, date, objDay);
         }
 
         response.send(answer);

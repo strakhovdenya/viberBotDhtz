@@ -1,4 +1,4 @@
-import {bad,good} from "./sheduleDayAnswersElder.js";
+import {goodElder,badElder} from "../sheduleDayAnswers.js";
 import {ScheduleElder} from "../../models/scheduleElder.js";
 import dateFormatter from "../dateFormatter.js";
 
@@ -11,9 +11,9 @@ function answerElderBinber(date) {
         let [objDay] = scheduleDay;
 
         if (typeof objDay === 'undefined') {
-            answer = bad(response, date, objDay);
+            answer = badElder(response, date, objDay);
         } else {
-            answer = good(response, date, objDay);
+            answer = goodElder(response, date, objDay);
         }
 
         response.send(answer);
