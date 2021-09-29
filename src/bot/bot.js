@@ -1,12 +1,12 @@
 import createLogger from "../helpers/logger.js";
 import Bot from "viber-bot";
 
-import sheduleMonthJunior from "../helpers/shedule_month_junior.js";
-import sheduleMonthElder from "../helpers/shedule_month_elder.js";
+import {default as sheduleMonthJunior} from "../helpers/shedule_month_junior.js";
+import {default as sheduleMonthElder} from "../helpers/shedule_month_elder.js";
 import {default as sheduleTodayJunior} from "../helpers/shedule_today_junior.js";
-import sheduleTomorrowJunior from "../helpers/shedule_tomorrow_junior.js";
-import sheduleTodayElder from "../helpers/shedule_today_elder.js";
-import sheduleTomorrowElder from "../helpers/shedule_tomorrow_elder.js";
+import {default as sheduleTomorrowJunior} from "../helpers/shedule_tomorrow_junior.js";
+import {default as sheduleTodayElder} from "../helpers/shedule_today_elder.js";
+import {default as sheduleTomorrowElder} from "../helpers/shedule_tomorrow_elder.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
 
@@ -63,17 +63,17 @@ bot.onTextMessage(/./, (message, response) => {
     }
 
     if (message.text === 'shedule_month_junior') {
-        sheduleMonthJunior.send(response);
+        sheduleMonthJunior(response);
     } else if (message.text === 'shedule_month_elder') {
-        sheduleMonthElder.send(response);
+        sheduleMonthElder(response);
     } else if (message.text === 'shedule_today_junior') {
         sheduleTodayJunior(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
-        sheduleTomorrowJunior.send(response);
+        sheduleTomorrowJunior(response);
     } else if (message.text === 'shedule_today_elder') {
-        sheduleTodayElder.send(response);
+        sheduleTodayElder(response);
     } else if (message.text === 'shedule_tomorrow_elder') {
-        sheduleTomorrowElder.send(response);
+        sheduleTomorrowElder(response);
     } else if (message.text === 'junior') {
         response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
     } else if (message.text === 'elder') {

@@ -1,5 +1,3 @@
-
-
 import {bad,good} from "./sheduleDayAnswersJunior.js";
 import dateFormatter from "./dateFormatter.js";
 import {ScheduleJunior} from "../models/schedule.js";
