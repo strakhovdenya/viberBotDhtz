@@ -1,6 +1,6 @@
 import {bad,good} from "./sheduleDayAnswersJunior.js";
 import dateFormatter from "./dateFormatter.js";
-import {ScheduleJunior} from "../models/schedule";
+import {ScheduleJunior} from "../models/schedule.js";
 
 const send = async function (response) {
     const formattedDate = dateFormatter(1);
