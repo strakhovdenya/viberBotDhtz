@@ -1,10 +1,10 @@
 import createLogger from "../helpers/logger.js";
 import Bot from "viber-bot";
 
-import {default as sheduleMonthJunior} from "../helpers/shedule_month_junior.js";
+import {default as sheduleMonthJunior} from "../helpers/juniors/shedule_month_junior.js";
 import {default as sheduleMonthElder} from "../helpers/shedule_month_elder.js";
-import {default as sheduleTodayJunior} from "../helpers/shedule_today_junior.js";
-import {default as sheduleTomorrowJunior} from "../helpers/shedule_tomorrow_junior.js";
+import {scheduleTodayJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
+import {scheduleTomorrowJunior} from "../helpers/juniors/scheduleDaysAnswers.js";
 import {default as sheduleTodayElder} from "../helpers/shedule_today_elder.js";
 import {default as sheduleTomorrowElder} from "../helpers/shedule_tomorrow_elder.js";
 import {con as constants} from "../helpers/constants.js";
@@ -51,7 +51,7 @@ bot.on("message", (message, response) => {
 });
 
 
-bot.onTextMessage(/./, (message, response) => {
+bot.onTextMessage(/./, async (message, response) => {
 
     // delete duplicate messages when heroku start
     if (process.env.MSG_TOKEN === message.token) {
@@ -67,9 +67,9 @@ bot.onTextMessage(/./, (message, response) => {
     } else if (message.text === 'shedule_month_elder') {
         sheduleMonthElder(response);
     } else if (message.text === 'shedule_today_junior') {
-        sheduleTodayJunior(response);
+        await scheduleTodayJunior(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
-        sheduleTomorrowJunior(response);
+        await scheduleTomorrowJunior(response);
     } else if (message.text === 'shedule_today_elder') {
         sheduleTodayElder(response);
     } else if (message.text === 'shedule_tomorrow_elder') {

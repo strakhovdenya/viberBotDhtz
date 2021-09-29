@@ -1,5 +1,5 @@
 import Bot from "viber-bot";
-import {con as constants} from "./constants.js";
+import {con as constants} from "../constants.js";
 
 export const good = function (response, formattedDate, objDay) {
 
