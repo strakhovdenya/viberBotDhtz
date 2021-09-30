@@ -64,7 +64,7 @@ bot.onTextMessage(/./, async (message, response) => {
     }
 
     const startMenu = await MenuService.getInstance();
-
+    console.log(startMenu);
     if (message.text === 'shedule_month_junior') {
         sheduleMonthJunior(response);
     } else if (message.text === 'shedule_month_elder') {
