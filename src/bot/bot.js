@@ -63,7 +63,7 @@ bot.onTextMessage(/./, async (message, response) => {
         process.env.MSG_TOKEN = message.token;
     }
 
-    await MenuService.getInstance();
+    const startMenu = await MenuService.getInstance();
 
     if (message.text === 'shedule_month_junior') {
         sheduleMonthJunior(response);
@@ -82,7 +82,7 @@ bot.onTextMessage(/./, async (message, response) => {
     } else if (message.text === 'elder') {
         response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
-        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
+        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, startMenu));
     } else {
         response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, constants.OPTION_KEYBOARD_START));
     }
