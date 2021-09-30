@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config/MenuService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/get_public_url.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +109,7 @@
       <workItem from="1632834381905" duration="9288000" />
       <workItem from="1632897983226" duration="7486000" />
       <workItem from="1632916564371" duration="1409000" />
-      <workItem from="1633001320442" duration="3176000" />
+      <workItem from="1633001320442" duration="4108000" />
     </task>
     <servers />
   </component>
