@@ -9,6 +9,7 @@ import {scheduleTodayElder} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTomorrowElder} from "../helpers/scheduleDaysAnswers.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
+import {MenuService} from "../config/MenuService.js";
 
 
 
@@ -61,6 +62,8 @@ bot.onTextMessage(/./, async (message, response) => {
     if (typeof process.env.MSG_TOKEN === 'undefined') {
         process.env.MSG_TOKEN = message.token;
     }
+
+    await MenuService.getInstance();
 
     if (message.text === 'shedule_month_junior') {
         sheduleMonthJunior(response);
