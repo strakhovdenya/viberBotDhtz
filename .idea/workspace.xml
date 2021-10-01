@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/menu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,7 +110,8 @@
       <workItem from="1632834381905" duration="9288000" />
       <workItem from="1632897983226" duration="7486000" />
       <workItem from="1632916564371" duration="1409000" />
-      <workItem from="1633001320442" duration="5403000" />
+      <workItem from="1633001320442" duration="6736000" />
+      <workItem from="1633071596779" duration="1497000" />
     </task>
     <servers />
   </component>

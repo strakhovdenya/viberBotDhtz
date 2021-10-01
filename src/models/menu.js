@@ -1,8 +1,40 @@
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const ScheduleSchema = new Schema({
+const ButtonSchema = new Schema({
+    Columns: {
+        type: Number,
+        required:true,
+    },
+    Rows :{
+        type: Number,
+        required:true,
+    },
+    BgColor:{
+        type: String,
+        require: true
+    },
+    Text: {
+        type: String,
+        require: true
+    },
+    TextSize: {
+        type: String,
+        require: true
+    },
+    ActionType:{
+        type: String,
+        require: true
+    },
+    ActionBody:{
+        type: String,
+        require: true
+    },
+
+});
+
+const MenuSchema = new Schema({
     Type: {
         type: String,
         require: true
@@ -12,7 +44,7 @@ const ScheduleSchema = new Schema({
         require: true
     },
     Buttons: {
-        type: Array,
+        type: [ButtonSchema],
         require: true
     },
     Revision: {
@@ -21,7 +53,6 @@ const ScheduleSchema = new Schema({
 
 });
 
-export const  MenuModel = mongoose.model('Menu', ScheduleSchema);
-
+export const MenuModel = mongoose.model('Menu', MenuSchema);
 
 
