@@ -14,6 +14,6 @@ export default async function getDefaultAnswer(userName, level) {
         //     answerResponse.push(new Bot.Message.Text(userName + ' '+textType.text, levelData.menu))
         // }
     }
-
+    console.log(answerResponse );
     return answerResponse;
 }

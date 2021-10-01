@@ -59,7 +59,7 @@ function answerJuniorBinber(date) {
         } else {
             answer = goodJunior(response, date, objDay);
         }
-
+        console.log(answer);
         response.send(answer);
     }
 }
