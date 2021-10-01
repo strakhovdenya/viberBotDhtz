@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/defaultAnswer/Answer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/defaultAnswer/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/defaultAnswer/defaultAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <workItem from="1632897983226" duration="7486000" />
       <workItem from="1632916564371" duration="1409000" />
       <workItem from="1633001320442" duration="6736000" />
-      <workItem from="1633071596779" duration="4467000" />
+      <workItem from="1633071596779" duration="6100000" />
     </task>
     <servers />
   </component>
