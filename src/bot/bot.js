@@ -81,14 +81,18 @@ bot.onTextMessage(/./, async (message, response) => {
         // response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
         response.send(await getDefaultAnswer(response.userProfile.name, 'junior'));
     } else if (message.text === 'elder') {
-        response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
+        // response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
+        response.send(await getDefaultAnswer(response.userProfile.name, 'elder'));
     } else if (message.text === 'start') {
-        const startMenu = await MenuService.getInstance('start');
-        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, startMenu));
+        // const startMenu = await MenuService.getInstance('start');
+        // response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, startMenu));
+        response.send(await getDefaultAnswer(response.userProfile.name, 'start'));
     } else {
-        const startMenu = await MenuService.getInstance('start');
-        response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, startMenu));
+        // const startMenu = await MenuService.getInstance('start');
+        // response.send(new Bot.Message.Text(`${response.userProfile.name} привет!!!!`, startMenu));
+        response.send(await getDefaultAnswer(response.userProfile.name, 'start'));
     }
 });
 
 export default bot;
+

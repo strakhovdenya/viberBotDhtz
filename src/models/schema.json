@@ -1,15 +1,12 @@
 {
   "_id": {
-    "$oid": "6156ba231fcf490b15de4ed5"
+    "$oid": "6156cd0d1fcf490b15de4eda"
   },
-  "level": "junior",
+  "level": "start",
   "isDefault": true,
   "answerText": [
     {
-      "sticker": 40133
-    },
-    {
-      "text": "бла бла бла"
+      "text": " привет!!!!"
     }
   ],
   "menu": {
@@ -17,40 +14,30 @@
     "Revision": 1,
     "Buttons": [
       {
-        "Columns": 6,
-        "Rows": 1,
-        "BgColor": "#2db9b9",
-        "Text": "Расписание сборов ИЮНЬ",
+        "Columns": {
+          "$numberInt": "3"
+        },
+        "Rows": {
+          "$numberInt": "2"
+        },
+        "BgColor": "#3c7af1",
+        "Text": "Старшие",
         "TextSize": "large",
         "ActionType": "reply",
-        "ActionBody": "shedule_month_junior"
+        "ActionBody": "elder"
       },
       {
-        "Columns": 6,
-        "Rows": 1,
-        "BgColor": "#adaeae",
-        "Text": "Расписание на сегодня<br>(нет информации)",
+        "Columns": {
+          "$numberInt": "3"
+        },
+        "Rows": {
+          "$numberInt": "2"
+        },
+        "BgColor": "#3c7af1",
+        "Text": "Младшие",
         "TextSize": "large",
         "ActionType": "reply",
-        "ActionBody": "shedule_today_junior"
-      },
-      {
-        "Columns": 6,
-        "Rows": 1,
-        "BgColor": "#adaeae",
-        "Text": "Расписание на завтра<br>(нет информации)",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "shedule_tomorrow_junior"
-      },
-      {
-        "Columns": 6,
-        "Rows": 1,
-        "BgColor": "#b8426b",
-        "Text": "Вернуться для выбора (младшие/старшие)",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "start"
+        "ActionBody": "junior"
       }
     ]
   }
