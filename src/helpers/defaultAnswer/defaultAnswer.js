@@ -3,8 +3,10 @@ import Bot from "viber-bot";
 
 
 export default async function getDefaultAnswer(userName, level) {
-    const levelData = await AnswerModel.findOne({level: {$eq: level}, isDefault: {$eq: true}});
-    console.log(levelData );
+    let levelData = await AnswerModel.findOne({level: {$eq: level}, isDefault: {$eq: true}});
+    if(!levelData){
+        levelData = await AnswerModel.findOne({level: {$eq: 'start'}, isDefault: {$eq: true}});
+    }
     const answerResponse = [];
     for (let textType of levelData.answerText) {
         if (textType.sticker) {
