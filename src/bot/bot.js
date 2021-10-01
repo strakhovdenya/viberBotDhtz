@@ -10,6 +10,7 @@ import {scheduleTomorrowElder} from "../helpers/scheduleDaysAnswers.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
 import {MenuService} from "../config/MenuService.js";
+import getDefaultAnswer from "../helpers/defaultAnswer/Answer";
 
 
 
@@ -77,7 +78,8 @@ bot.onTextMessage(/./, async (message, response) => {
     } else if (message.text === 'shedule_tomorrow_elder') {
         await scheduleTomorrowElder(response);
     } else if (message.text === 'junior') {
-        response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
+        // response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
+        response.send(await getDefaultAnswer(response.userProfile.name));
     } else if (message.text === 'elder') {
         response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
     } else if (message.text === 'start') {
