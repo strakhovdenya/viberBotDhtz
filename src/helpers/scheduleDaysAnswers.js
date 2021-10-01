@@ -1,5 +1,6 @@
 import {ScheduleJunior} from "../models/scheduleJunior.js";
 import {ScheduleElder} from "../models/scheduleElder.js";
+import {MenuModel} from "../models/menu.js";
 
 import dateFormatter from "./dateFormatter.js";
 
@@ -11,8 +12,13 @@ const typesOfClient = {
     junior:"младших",
 }
 
-function bindGoodAnswer(typeForWhom, menu){
-    return function (response, formattedDate, objDay) {
+function bindGoodAnswer(typeForWhom, menuType){
+    return async function (response, formattedDate, objDay) {
+
+        let menuData = await MenuModel.findOne({level: {$eq: menuType}});
+        if(!menuData){
+            menuData = await MenuModel.findOne({level: {$eq: 'start'}});
+        }
 
         const text = `${response.userProfile.name} лови расписание на ${formattedDate} для ${typeForWhom}.  \r\n
     (snowflake)Лед на: ${objDay.time_ice}  \r\n
@@ -21,30 +27,35 @@ function bindGoodAnswer(typeForWhom, menu){
     ==========================\r\n
     (time)Время сбора: ${objDay.gathering_time}`;
 
-        const answer  = new Bot.Message.Text(text, menu);
+        const answer  = new Bot.Message.Text(text, menuData);
 
         return [answer];
     }
 }
 
-function bindBadAnswer(typeForWhom, menu){
-    return function (response, formattedDate, objDay) {
+function bindBadAnswer(typeForWhom, menuType){
+    return async function (response, formattedDate, objDay) {
+
+        let menuData = await MenuModel.findOne({level: {$eq: menuType}});
+        if(!menuData){
+            menuData = await MenuModel.findOne({level: {$eq: 'start'}});
+        }
 
         const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) для ${typeForWhom} нет (sad)`;
 
         const answer1 = new Bot.Message.Sticker(40133);
-        const answer2 = new Bot.Message.Text(text, menu);
+        const answer2 = new Bot.Message.Text(text, menuData);
 
         return [answer1,answer2];
     }
 }
 
 
-export const goodJunior = bindGoodAnswer(typesOfClient.junior, constants.OPTION_KEYBOARD_JUNIOR);
-export const goodElder = bindGoodAnswer(typesOfClient.elder, constants.OPTION_KEYBOARD_ELDER);
+export const goodJunior = bindGoodAnswer(typesOfClient.junior, "junior");
+export const goodElder = bindGoodAnswer(typesOfClient.elder, "elder");
 
-export const badJunior = bindBadAnswer(typesOfClient.junior, constants.OPTION_KEYBOARD_JUNIOR);
-export const badElder = bindBadAnswer(typesOfClient.elder, constants.OPTION_KEYBOARD_ELDER);
+export const badJunior = bindBadAnswer(typesOfClient.junior, "junior");
+export const badElder = bindBadAnswer(typesOfClient.elder, "elder");
 
 function answerJuniorBinber(date) {
     return async function (response){
