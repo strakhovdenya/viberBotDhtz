@@ -77,7 +77,7 @@ function answerElderBinber(date) {
         } else {
             answer = goodElder(response, date, objDay);
         }
-
+        console.log(answer);
         response.send(answer);
     }
 }
