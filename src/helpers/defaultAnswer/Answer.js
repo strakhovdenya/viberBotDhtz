@@ -6,7 +6,7 @@ export default async function getDefaultAnswer(userName, level) {
     const levelData = await AnswerModel.findOne({level: {$eq: level}, isDefault: {$eq: true}});
     console.log(levelData );
     const answerResponse = [];
-    for (let textType in levelData.answerText) {
+    for (let textType of levelData.answerText) {
         if (textType.sticker) {
             answerResponse.push(new Bot.Message.Sticker(textType.sticker))
         }
