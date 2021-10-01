@@ -5,13 +5,13 @@ const Schema = mongoose.Schema;
 const ButtonSchema = new Schema({
     Columns: {
         type: Number,
-        required:true,
+        required: true,
     },
-    Rows :{
+    Rows: {
         type: Number,
-        required:true,
+        required: true,
     },
-    BgColor:{
+    BgColor: {
         type: String,
         require: true
     },
@@ -23,23 +23,22 @@ const ButtonSchema = new Schema({
         type: String,
         require: true
     },
-    ActionType:{
+    ActionType: {
         type: String,
         require: true
     },
-    ActionBody:{
+    ActionBody: {
         type: String,
         require: true
     },
-
 });
 
 const MenuSchema = new Schema({
-    Type: {
+    level: {
         type: String,
         require: true
     },
-    level: {
+    Type: {
         type: String,
         require: true
     },
