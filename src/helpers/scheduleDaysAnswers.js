@@ -66,9 +66,9 @@ function answerJuniorBinber(date) {
         let [objDay] = scheduleDay;
 
         if (typeof objDay === 'undefined') {
-            answer = badJunior(response, date, objDay);
+            answer = await badJunior(response, date, objDay);
         } else {
-            answer = goodJunior(response, date, objDay);
+            answer = await goodJunior(response, date, objDay);
         }
         console.log(answer);
         response.send(answer);
@@ -84,9 +84,9 @@ function answerElderBinber(date) {
         let [objDay] = scheduleDay;
 
         if (typeof objDay === 'undefined') {
-            answer = badElder(response, date, objDay);
+            answer = await badElder(response, date, objDay);
         } else {
-            answer = goodElder(response, date, objDay);
+            answer = await goodElder(response, date, objDay);
         }
 
         response.send(answer);
