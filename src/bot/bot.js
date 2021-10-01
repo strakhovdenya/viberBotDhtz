@@ -79,7 +79,7 @@ bot.onTextMessage(/./, async (message, response) => {
         await scheduleTomorrowElder(response);
     } else if (message.text === 'junior') {
         // response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для младших`, constants.OPTION_KEYBOARD_JUNIOR));
-        response.send(await getDefaultAnswer(response.userProfile.name, 'junior'));
+        response.send(await getDefaultAnswer(response.userProfile.name, 'junior1'));
     } else if (message.text === 'elder') {
         // response.send(new Bot.Message.Text(`${response.userProfile.name} вот меню для старших`, constants.OPTION_KEYBOARD_ELDER));
         response.send(await getDefaultAnswer(response.userProfile.name, 'elder'));
