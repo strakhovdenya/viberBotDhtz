@@ -10,7 +10,7 @@ import {scheduleTomorrowElder} from "../helpers/scheduleDaysAnswers.js";
 import {con as constants} from "../helpers/constants.js";
 import {} from 'dotenv/config.js';
 import {MenuService} from "../config/MenuService.js";
-import getDefaultAnswer from "../helpers/defaultAnswer/Answer";
+import getDefaultAnswer from "../helpers/defaultAnswer/Answer.js";
 
 
 
