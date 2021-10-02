@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
-import {MenuModel} from "./menu";
 
 const Schema = mongoose.Schema;
-
 
 const AnswerTextSchema = new Schema({
     text: {
