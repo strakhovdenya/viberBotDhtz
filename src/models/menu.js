@@ -61,7 +61,7 @@ export async function getMenuByLevelOrStart(menuType) {
         menuData = await MenuModel.findOne({level: {$eq: 'start'}});
     }
 
-    return menuType;
+    return menuData;
 }
 
 
