@@ -12,6 +12,10 @@ const typesOfClient = {
     junior:"младших",
 }
 
+function dataEmptySanitize(param) {
+    return param === "" ? ' - ' : param;
+}
+
 function bindGoodAnswer(typeForWhom, menuType){
     return async function (response, formattedDate, objDay) {
 
@@ -19,13 +23,13 @@ function bindGoodAnswer(typeForWhom, menuType){
 
         const text = `${response.userProfile.name} лови расписание на ${formattedDate} для ${typeForWhom}.  \r\n
     =========(snowflake)Лед=========\r\n
-    (car)Место: ${objDay.ice_place}  \r\n
-    (time)тренировка: ${objDay.ice_time}  \r\n 
-    (time)сбор: ${objDay.ice_gathering_time}\r\n 
+    (car)Место: ${dataEmptySanitize(objDay.ice_place)}  \r\n
+    (time)тренировка: ${dataEmptySanitize(objDay.ice_time)}  \r\n 
+    (time)сбор: ${dataEmptySanitize(objDay.ice_gathering_time)}\r\n 
      =========(run)Земля=======\r\n
-    (car)Место: ${objDay.ground_place}  \r\n
-    (time)тренировка: ${objDay.ground_time === "" ? '- ' : objDay.ground_time} \r\n 
-    (time)сбор: ${objDay.ground_gathering_time}`;
+    (car)Место: ${dataEmptySanitize(objDay.ground_place)}  \r\n
+    (time)тренировка: ${dataEmptySanitize(objDay.ground_time)} \r\n 
+    (time)сбор: ${dataEmptySanitize(objDay.ground_gathering_time)}`;
 
         const answer  = new Bot.Message.Text(text, menuData);
 
