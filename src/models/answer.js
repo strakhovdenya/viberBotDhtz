@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import {MenuModel} from "./menu";
 
 const Schema = mongoose.Schema;
 
@@ -38,4 +39,11 @@ const AnswerSchema = new Schema({
 
 export const AnswerModel = mongoose.model('Answer', AnswerSchema);
 
+export async function getAnswerByLevelOrStart(level) {
+    let levelData = await AnswerModel.findOne({level: {$eq: level}, isDefault: {$eq: true}});
+    if(!levelData){
+        levelData = await AnswerModel.findOne({level: {$eq: 'start'}, isDefault: {$eq: true}});
+    }
 
+    return levelData;
+}

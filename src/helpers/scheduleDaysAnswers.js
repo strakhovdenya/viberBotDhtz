@@ -1,6 +1,6 @@
 import {ScheduleJunior} from "../models/scheduleJunior.js";
 import {ScheduleElder} from "../models/scheduleElder.js";
-import {MenuModel} from "../models/menu.js";
+import {getMenuByLevelOrStart} from "../models/menu.js";
 
 import dateFormatter from "./dateFormatter.js";
 
@@ -15,10 +15,7 @@ const typesOfClient = {
 function bindGoodAnswer(typeForWhom, menuType){
     return async function (response, formattedDate, objDay) {
 
-        let menuData = await MenuModel.findOne({level: {$eq: menuType}});
-        if(!menuData){
-            menuData = await MenuModel.findOne({level: {$eq: 'start'}});
-        }
+        const  menuData =  await getMenuByLevelOrStart(menuType);
 
         const text = `${response.userProfile.name} лови расписание на ${formattedDate} для ${typeForWhom}.  \r\n
     (snowflake)Лед на: ${objDay.time_ice}  \r\n
@@ -36,10 +33,7 @@ function bindGoodAnswer(typeForWhom, menuType){
 function bindBadAnswer(typeForWhom, menuType){
     return async function (response, formattedDate, objDay) {
 
-        let menuData = await MenuModel.findOne({level: {$eq: menuType}});
-        if(!menuData){
-            menuData = await MenuModel.findOne({level: {$eq: 'start'}});
-        }
+        const  menuData =  await getMenuByLevelOrStart(menuType);
 
         const text = `${response.userProfile.name} сорри такой информации (на ${formattedDate}) для ${typeForWhom} нет (sad)`;
 

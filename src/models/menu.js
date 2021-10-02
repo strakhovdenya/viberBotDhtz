@@ -55,3 +55,13 @@ const MenuSchema = new Schema({
 export const MenuModel = mongoose.model('Menu', MenuSchema);
 
 
+export async function getMenuByLevelOrStart(menuType) {
+    let menuData = await MenuModel.findOne({level: {$eq: menuType}});
+    if(!menuData){
+        menuData = await MenuModel.findOne({level: {$eq: 'start'}});
+    }
+
+    return menuType;
+}
+
+
