@@ -18,11 +18,18 @@ function bindGoodAnswer(typeForWhom, menuType){
         const  menuData =  await getMenuByLevelOrStart(menuType);
 
         const text = `${response.userProfile.name} лови расписание на ${formattedDate} для ${typeForWhom}.  \r\n
-    (snowflake)Лед на: ${objDay.time_ice}  \r\n
+     
+    =========(snowflake)Лед=========\r\n
     (car)Место: ${objDay.ice_place}  \r\n
-    (run)Земля: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n
+    время: ${objDay.time_ice}  \r\n 
+    (time)Время сбора: ${objDay.gathering_time}
     ==========================\r\n
-    (time)Время сбора: ${objDay.gathering_time}`;
+    \r\n 
+     =========(run)Земля=========\r\n
+    (car)Место: ${objDay.ice_place}  \r\n
+    время: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n 
+    (time)Время сбора: ${objDay.gathering_time}
+    ==========================\r\n`;
 
         const answer  = new Bot.Message.Text(text, menuData);
 
