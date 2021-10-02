@@ -20,12 +20,12 @@ function bindGoodAnswer(typeForWhom, menuType){
         const text = `${response.userProfile.name} лови расписание на ${formattedDate} для ${typeForWhom}.  \r\n
     =========(snowflake)Лед=========\r\n
     (car)Место: ${objDay.ice_place}  \r\n
-    время: ${objDay.time_ice}  \r\n 
-    (time)Время сбора: ${objDay.gathering_time}\r\n 
+    время: ${objDay.ice_time}  \r\n 
+    (time)Время сбора: ${objDay.ice_gathering_time}\r\n 
      =========(run)Земля=======\r\n
-    (car)Место: ${objDay.ice_place}  \r\n
-    время: ${objDay.time_ground === "" ? '- ' : objDay.time_ground} \r\n 
-    (time)Время сбора: ${objDay.gathering_time}`;
+    (car)Место: ${objDay.ground_place}  \r\n
+    время: ${objDay.ground_time === "" ? '- ' : objDay.ground_time} \r\n 
+    (time)Время сбора: ${objDay.ground_gathering_time}`;
 
         const answer  = new Bot.Message.Text(text, menuData);
 

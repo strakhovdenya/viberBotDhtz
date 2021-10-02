@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
- const ScheduleSchema = new Schema({
+const ScheduleSchema = new Schema({
     data: {
         type: String,
         require: true
@@ -11,18 +11,24 @@ const Schema = mongoose.Schema;
         type: String,
         require: true
     },
-    time_ice: {
+    ice_time: {
         type: String
     },
     ice_place: {
         type: String
     },
-    time_ground: {
+    ice_gathering_time: {
         type: String
     },
-    gathering_time: {
+    ground_time: {
         type: String
-    }
+    },
+    ground_place: {
+        type: String
+    },
+    ground_gathering_time: {
+        type: String
+    },
 });
 
 export default ScheduleSchema;
