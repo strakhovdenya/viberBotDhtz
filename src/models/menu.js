@@ -61,7 +61,9 @@ function changeInMenuPlaceholderCurrentMonth(menuData, monthName = null) {
     const month = months[monthNum];
 
     for (let button of menuData.Buttons) {
+        console.log(button.Text)
         button.Text.replace(':current_date:', month);
+        console.log(button.Text)
     }
 
     return menuData;
