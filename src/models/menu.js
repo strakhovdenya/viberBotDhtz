@@ -54,14 +54,27 @@ const MenuSchema = new Schema({
 
 export const MenuModel = mongoose.model('Menu', MenuSchema);
 
+function changeInMenuPlaceholderCurrentMonth(menuData, monthName = null) {
+    const date = new Date();
+    const monthNum = date.getMonth();
+    const months = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+    const month = months[monthNum];
 
-export async function getMenuByLevelOrStart(menuType) {
-    let menuData = await MenuModel.findOne({level: {$eq: menuType}});
-    if(!menuData){
-        menuData = await MenuModel.findOne({level: {$eq: 'start'}});
+    for (let button of menuData.Buttons) {
+        button.Text.replace(':current_date:', month);
     }
 
     return menuData;
+}
+
+export async function getMenuByLevelOrStart(menuType, options = {}) {
+    let menuData = await MenuModel.findOne({level: {$eq: menuType}});
+    if (!menuData) {
+        menuData = await MenuModel.findOne({level: {$eq: 'start'}});
+    }
+
+
+    return changeInMenuPlaceholderCurrentMonth(menuData);
 }
 
 

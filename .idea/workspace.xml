@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/typeOfClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/typeOfMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/shedule_month_middle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/sheduleElder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/sheduleJunior.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/defaultAnswer/defaultAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/defaultAnswer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/elder/shedule_month_elder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_elder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/juniors/shedule_month_junior.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/shedule_month_junior.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/menu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +113,7 @@
       <workItem from="1633172081071" duration="2354000" />
       <workItem from="1633184000152" duration="1100000" />
       <workItem from="1633203588543" duration="9000" />
-      <workItem from="1633335186764" duration="5902000" />
+      <workItem from="1633335186764" duration="8080000" />
     </task>
     <servers />
   </component>
