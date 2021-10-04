@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dcdfbc4-7887-4362-90df-b8575b3f230e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/models/scheduleMiddle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/scheduleDaysAnswers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +114,9 @@
       <workItem from="1633071596779" duration="11342000" />
       <workItem from="1633163577193" duration="2507000" />
       <workItem from="1633172081071" duration="2354000" />
+      <workItem from="1633184000152" duration="1100000" />
+      <workItem from="1633203588543" duration="9000" />
+      <workItem from="1633335186764" duration="1147000" />
     </task>
     <servers />
   </component>

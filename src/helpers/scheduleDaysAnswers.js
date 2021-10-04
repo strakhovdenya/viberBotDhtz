@@ -5,11 +5,18 @@ import {getMenuByLevelOrStart} from "../models/menu.js";
 import dateFormatter from "./dateFormatter.js";
 
 import Bot from "viber-bot";
-import {con as constants} from "./constants.js";
+import {ScheduleMiddle} from "../models/scheduleMiddle";
 
 const typesOfClient = {
     elder: "старших",
     junior: "младших",
+    middle: "средних",
+}
+
+const typesOfMenu = {
+    elder: "elder",
+    junior: "junior",
+    middle: "middle",
 }
 
 function dataEmptySanitize(param) {
@@ -55,11 +62,13 @@ function bindBadAnswer(typeForWhom, menuType) {
 }
 
 
-export const goodJunior = bindGoodAnswer(typesOfClient.junior, "junior");
-export const goodElder = bindGoodAnswer(typesOfClient.elder, "elder");
+export const goodJunior = bindGoodAnswer(typesOfClient.junior, typesOfMenu.junior);
+export const goodElder = bindGoodAnswer(typesOfClient.elder, typesOfMenu.elder);
+export const goodMiddle = bindGoodAnswer(typesOfClient.middle, "middle");
 
-export const badJunior = bindBadAnswer(typesOfClient.junior, "junior");
-export const badElder = bindBadAnswer(typesOfClient.elder, "elder");
+export const badJunior = bindBadAnswer(typesOfClient.junior, typesOfMenu.junior);
+export const badElder = bindBadAnswer(typesOfClient.elder, typesOfMenu.elder);
+export const badMiddle = bindBadAnswer(typesOfClient.middle, typesOfMenu.middle);
 
 function answerJuniorBinber(date) {
     return async function (response) {
@@ -97,8 +106,29 @@ function answerElderBinber(date) {
     }
 }
 
+function answerElderMiddle(date) {
+    return async function (response) {
+        let answer;
+
+        const scheduleDay = await ScheduleMiddle.find({data: {$eq: date}});
+
+        let [objDay] = scheduleDay;
+
+        if (typeof objDay === 'undefined') {
+            answer = await badMiddle(response, date, objDay);
+        } else {
+            answer = await goodMiddle(response, date, objDay);
+        }
+
+        response.send(answer);
+    }
+}
+
 export const scheduleTodayElder = answerElderBinber(dateFormatter());
 export const scheduleTomorrowElder = answerElderBinber(dateFormatter(1));
 
 export const scheduleTodayJunior = answerJuniorBinber(dateFormatter());
 export const scheduleTomorrowJunior = answerJuniorBinber(dateFormatter(1));
+
+export const scheduleTodayMiddle = answerElderMiddle(dateFormatter());
+export const scheduleTomorrowMiddle = answerElderMiddle(dateFormatter(1));

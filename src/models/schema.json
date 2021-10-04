@@ -1,81 +1,8 @@
 {
   "_id": {
-    "$oid": "6156ba231fcf490b15de4ed5"
+    "$oid": "615abc1785e245769df020f2"
   },
-  "level": "junior",
-  "isDefault": true,
-  "answerText": [
-    {
-      "text": " вот меню для младших"
-    }
-  ],
-  "menu": {
-    "Type": "keyboard",
-    "Revision": {
-      "$numberInt": "1"
-    },
-    "Buttons": [
-      {
-        "Columns": {
-          "$numberInt": "6"
-        },
-        "Rows": {
-          "$numberInt": "1"
-        },
-        "BgColor": "#2db9b9",
-        "Text": "Расписание сборов ИЮНЬ",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "shedule_month_junior"
-      },
-      {
-        "Columns": {
-          "$numberInt": "6"
-        },
-        "Rows": {
-          "$numberInt": "1"
-        },
-        "BgColor": "#adaeae",
-        "Text": "Расписание на сегодня<br>(нет информации)",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "shedule_today_junior"
-      },
-      {
-        "Columns": {
-          "$numberInt": "6"
-        },
-        "Rows": {
-          "$numberInt": "1"
-        },
-        "BgColor": "#adaeae",
-        "Text": "Расписание на завтра<br>(нет информации)",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "shedule_tomorrow_junior"
-      },
-      {
-        "Columns": {
-          "$numberInt": "6"
-        },
-        "Rows": {
-          "$numberInt": "1"
-        },
-        "BgColor": "#b8426b",
-        "Text": "Вернуться для выбора (младшие/старшие)",
-        "TextSize": "large",
-        "ActionType": "reply",
-        "ActionBody": "start"
-      }
-    ]
-  }
-}
-
-{
-  "_id": {
-    "$oid": "615722601fcf490b15de4edf"
-  },
-  "level": "junior",
+  "level": "middle",
   "Type": "keyboard",
   "Revision": {
     "$numberInt": "1"
@@ -92,7 +19,7 @@
       "Text": "Расписание сборов ИЮНЬ",
       "TextSize": "large",
       "ActionType": "reply",
-      "ActionBody": "shedule_month_junior"
+      "ActionBody": "shedule_month_middle"
     },
     {
       "Columns": {
@@ -105,7 +32,7 @@
       "Text": "Расписание на сегодня<br>(нет информации)",
       "TextSize": "large",
       "ActionType": "reply",
-      "ActionBody": "shedule_today_junior"
+      "ActionBody": "shedule_today_middle"
     },
     {
       "Columns": {
@@ -118,7 +45,7 @@
       "Text": "Расписание на завтра<br>(нет информации)",
       "TextSize": "large",
       "ActionType": "reply",
-      "ActionBody": "shedule_tomorrow_junior"
+      "ActionBody": "shedule_tomorrow_middle"
     },
     {
       "Columns": {
@@ -134,5 +61,4 @@
       "ActionBody": "start"
     }
   ]
-}
 }

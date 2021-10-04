@@ -3,7 +3,7 @@ import Bot from "viber-bot";
 
 import {default as sheduleMonthJunior} from "../helpers/juniors/shedule_month_junior.js";
 import {default as sheduleMonthElder} from "../helpers/elder/shedule_month_elder.js";
-import {scheduleTodayJunior} from "../helpers/scheduleDaysAnswers.js";
+import {scheduleTodayJunior, scheduleTodayMiddle, scheduleTomorrowMiddle} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTomorrowJunior} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTodayElder} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTomorrowElder} from "../helpers/scheduleDaysAnswers.js";
@@ -77,6 +77,10 @@ bot.onTextMessage(/./, async (message, response) => {
         await scheduleTodayElder(response);
     } else if (message.text === 'shedule_tomorrow_elder') {
         await scheduleTomorrowElder(response);
+    } else if (message.text === 'shedule_today_middle') {
+        await scheduleTodayMiddle(response);
+    } else if (message.text === 'shedule_tomorrow_middle') {
+        await scheduleTomorrowMiddle(response)
     } else {
         response.send(await getDefaultAnswer(response.userProfile.name, message.text));
     }
