@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import CurrentMonth from "../placeholderStrategiesInMenu/CurrentMonth.js";
 
 const Schema = mongoose.Schema;
 
@@ -54,31 +55,11 @@ const MenuSchema = new Schema({
 
 export const MenuModel = mongoose.model('Menu', MenuSchema);
 
-const placeholders = {
-    currentDate: ':current_date:'
-}
+const placeholderStack = [
+    new CurrentMonth()
+]
 
-const options = {
-    currentDate: ''
-}
 
-function changeInMenuPlaceholderCurrentMonth(menuData, monthName = null) {
-    let replacedMonth;
-    if (monthName === null) {
-        const date = new Date();
-        const monthNum = date.getMonth();
-        const months = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
-        replacedMonth = months[monthNum];
-    } else{
-        replacedMonth = monthName;
-    }
-
-    for (let button of menuData.Buttons) {
-        button.Text = button.Text.replace(placeholders.currentDate, replacedMonth.toLowerCase())
-    }
-
-    return menuData;
-}
 
 export async function getMenuByLevelOrStart(menuType, options = {}) {
     let menuData = await MenuModel.findOne({level: {$eq: menuType}});
@@ -86,13 +67,11 @@ export async function getMenuByLevelOrStart(menuType, options = {}) {
         menuData = await MenuModel.findOne({level: {$eq: 'start'}});
     }
 
-    let monthName = null;
-
-    if (options.currentDate !== undefined) {
-        monthName = options.currentDate;
+    for (let strategy of placeholderStack){
+        menuData = strategy.replace(menuData, options)
     }
 
-    return changeInMenuPlaceholderCurrentMonth(menuData, monthName);
+    return menuData;
 }
 
 
