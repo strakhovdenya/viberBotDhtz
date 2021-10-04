@@ -1,5 +1,5 @@
-import {getAnswerByLevelOrStart} from "../../models/answer.js";
-import {getMenuByLevelOrStart} from "../../models/menu.js";
+import {getAnswerByLevelOrStart} from "../models/answer.js";
+import {getMenuByLevelOrStart} from "../models/menu.js";
 import Bot from "viber-bot";
 
 

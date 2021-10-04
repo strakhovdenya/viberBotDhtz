@@ -6,18 +6,10 @@ import {getMenuByLevelOrStart} from "../models/menu.js";
 import dateFormatter from "./dateFormatter.js";
 
 import Bot from "viber-bot";
+import typesOfClient from "../constants/typeOfClient.js";
+import typesOfMenu from "../constants/typeOfMenu.js";
 
-const typesOfClient = {
-    elder: "старших",
-    junior: "младших",
-    middle: "средних",
-}
 
-const typesOfMenu = {
-    elder: "elder",
-    junior: "junior",
-    middle: "middle",
-}
 
 function dataEmptySanitize(param) {
     if (param === "" || param === undefined) {
