@@ -87,6 +87,7 @@ export async function getMenuByLevelOrStart(menuType, options = {}) {
     }
 
     let monthName = null;
+
     if (options.currentDate !== undefined) {
         monthName = options.currentDate;
     }
