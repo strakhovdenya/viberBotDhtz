@@ -1,8 +1,9 @@
 import createLogger from "../helpers/logger.js";
 import Bot from "viber-bot";
 
-import {default as sheduleMonthJunior} from "../helpers/shedule_month_junior.js";
-import {default as sheduleMonthElder} from "../helpers/shedule_month_elder.js";
+import {default as scheduleMonthJunior} from "../helpers/shedule_month_junior.js";
+import {default as scheduleMonthElder} from "../helpers/shedule_month_elder.js";
+import {default as scheduleMonthMiddle} from "../helpers/shedule_month_middle.js";
 import {scheduleTodayJunior, scheduleTodayMiddle, scheduleTomorrowMiddle} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTomorrowJunior} from "../helpers/scheduleDaysAnswers.js";
 import {scheduleTodayElder} from "../helpers/scheduleDaysAnswers.js";
@@ -66,9 +67,11 @@ bot.onTextMessage(/./, async (message, response) => {
 
 
     if (message.text === 'shedule_month_junior') {
-        sheduleMonthJunior(response);
+        await scheduleMonthJunior(response);
     } else if (message.text === 'shedule_month_elder') {
-        sheduleMonthElder(response);
+        await scheduleMonthElder(response);
+    } else if (message.text === 'shedule_month_middle') {
+        await scheduleMonthMiddle(response);
     } else if (message.text === 'shedule_today_junior') {
         await scheduleTodayJunior(response);
     } else if (message.text === 'shedule_tomorrow_junior') {
