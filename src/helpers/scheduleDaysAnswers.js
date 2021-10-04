@@ -1,11 +1,11 @@
 import {ScheduleJunior} from "../models/scheduleJunior.js";
 import {ScheduleElder} from "../models/scheduleElder.js";
+import {ScheduleMiddle} from "../models/scheduleMiddle.js";
 import {getMenuByLevelOrStart} from "../models/menu.js";
 
 import dateFormatter from "./dateFormatter.js";
 
 import Bot from "viber-bot";
-import {ScheduleMiddle} from "../models/scheduleMiddle";
 
 const typesOfClient = {
     elder: "старших",
