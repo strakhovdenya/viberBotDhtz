@@ -54,19 +54,27 @@ const MenuSchema = new Schema({
 
 export const MenuModel = mongoose.model('Menu', MenuSchema);
 
+const placeholders = {
+    currentDate: ':current_date:'
+}
+
+const options = {
+    currentDate: ''
+}
+
 function changeInMenuPlaceholderCurrentMonth(menuData, monthName = null) {
-    const date = new Date();
-    const monthNum = date.getMonth();
-    const months = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
-    const month = months[monthNum];
+    let replacedMonth;
+    if (monthName === null) {
+        const date = new Date();
+        const monthNum = date.getMonth();
+        const months = ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'];
+        replacedMonth = months[monthNum];
+    } else{
+        replacedMonth = monthName;
+    }
 
     for (let button of menuData.Buttons) {
-        console.log(button.Text)
-        const textMenu = button.Text;
-        const newText = textMenu.replace(':current_date:', month)
-        console.log('newText ',newText)
-        button.Text = newText;
-        console.log(button.Text)
+        button.Text = button.Text.replace(placeholders.currentDate, replacedMonth.toLowerCase())
     }
 
     return menuData;
@@ -78,8 +86,12 @@ export async function getMenuByLevelOrStart(menuType, options = {}) {
         menuData = await MenuModel.findOne({level: {$eq: 'start'}});
     }
 
+    let monthName = null;
+    if (options.currentDate !== undefined) {
+        monthName = options.currentDate;
+    }
 
-    return changeInMenuPlaceholderCurrentMonth(menuData);
+    return changeInMenuPlaceholderCurrentMonth(menuData, monthName);
 }
 
 
